@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE71A51A15F75CF300FE4DC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71A51915F75CF300FE4DC3 /* UIKit.framework */; };
+		CE71A51C15F75CF300FE4DC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71A51B15F75CF300FE4DC3 /* Foundation.framework */; };
+		CE71A51E15F75CF300FE4DC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71A51D15F75CF300FE4DC3 /* CoreGraphics.framework */; };
+		CE71A52415F75CF300FE4DC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE71A52215F75CF300FE4DC3 /* InfoPlist.strings */; };
+		CE71A52615F75CF300FE4DC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A52515F75CF300FE4DC3 /* main.m */; };
+		CE71A52A15F75CF300FE4DC3 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A52915F75CF300FE4DC3 /* SCAppDelegate.m */; };
+		CE71A52D15F75CF400FE4DC3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71A52B15F75CF400FE4DC3 /* MainStoryboard.storyboard */; };
+		CE71A53015F75CF400FE4DC3 /* SCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A52F15F75CF400FE4DC3 /* SCFirstViewController.m */; };
+		CE71A53215F75CF400FE4DC3 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53115F75CF400FE4DC3 /* first.png */; };
+		CE71A53415F75CF400FE4DC3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53315F75CF400FE4DC3 /* first@2x.png */; };
+		CE71A53715F75CF400FE4DC3 /* SCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A53615F75CF400FE4DC3 /* SCSecondViewController.m */; };
+		CE71A53915F75CF400FE4DC3 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53815F75CF400FE4DC3 /* second.png */; };
+		CE71A53B15F75CF400FE4DC3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53A15F75CF400FE4DC3 /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE71A51515F75CF300FE4DC3 /* scanorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scanorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE71A51915F75CF300FE4DC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE71A51B15F75CF300FE4DC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE71A51D15F75CF300FE4DC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE71A52115F75CF300FE4DC3 /* scanorama-Info.plist */ = {isa = PBXFileReference; path = "scanorama-Info.plist"; sourceTree = "<group>"; };
+		CE71A52315F75CF300FE4DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE71A52515F75CF300FE4DC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE71A52715F75CF300FE4DC3 /* scanorama-Prefix.pch */ = {isa = PBXFileReference; path = "scanorama-Prefix.pch"; sourceTree = "<group>"; };
+		CE71A52815F75CF300FE4DC3 /* SCAppDelegate.h */ = {isa = PBXFileReference; path = SCAppDelegate.h; sourceTree = "<group>"; };
+		CE71A52915F75CF300FE4DC3 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
+		CE71A52C15F75CF400FE4DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CE71A52E15F75CF400FE4DC3 /* SCFirstViewController.h */ = {isa = PBXFileReference; path = SCFirstViewController.h; sourceTree = "<group>"; };
+		CE71A52F15F75CF400FE4DC3 /* SCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCFirstViewController.m; sourceTree = "<group>"; };
+		CE71A53115F75CF400FE4DC3 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		CE71A53315F75CF400FE4DC3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		CE71A53515F75CF400FE4DC3 /* SCSecondViewController.h */ = {isa = PBXFileReference; path = SCSecondViewController.h; sourceTree = "<group>"; };
+		CE71A53615F75CF400FE4DC3 /* SCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSecondViewController.m; sourceTree = "<group>"; };
+		CE71A53815F75CF400FE4DC3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		CE71A53A15F75CF400FE4DC3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE71A51215F75CF300FE4DC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE71A51A15F75CF300FE4DC3 /* UIKit.framework in Frameworks */,
+				CE71A51C15F75CF300FE4DC3 /* Foundation.framework in Frameworks */,
+				CE71A51E15F75CF300FE4DC3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE71A50A15F75CF300FE4DC3 = {
+			isa = PBXGroup;
+			children = (
+				CE71A51F15F75CF300FE4DC3 /* scanorama */,
+				CE71A51815F75CF300FE4DC3 /* Frameworks */,
+				CE71A51615F75CF300FE4DC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE71A51615F75CF300FE4DC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE71A51515F75CF300FE4DC3 /* scanorama.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE71A51815F75CF300FE4DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE71A51915F75CF300FE4DC3 /* UIKit.framework */,
+				CE71A51B15F75CF300FE4DC3 /* Foundation.framework */,
+				CE71A51D15F75CF300FE4DC3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE71A51F15F75CF300FE4DC3 /* scanorama */ = {
+			isa = PBXGroup;
+			children = (
+				CE71A52815F75CF300FE4DC3 /* SCAppDelegate.h */,
+				CE71A52915F75CF300FE4DC3 /* SCAppDelegate.m */,
+				CE71A52B15F75CF400FE4DC3 /* MainStoryboard.storyboard */,
+				CE71A52E15F75CF400FE4DC3 /* SCFirstViewController.h */,
+				CE71A52F15F75CF400FE4DC3 /* SCFirstViewController.m */,
+				CE71A53115F75CF400FE4DC3 /* first.png */,
+				CE71A53315F75CF400FE4DC3 /* first@2x.png */,
+				CE71A53515F75CF400FE4DC3 /* SCSecondViewController.h */,
+				CE71A53615F75CF400FE4DC3 /* SCSecondViewController.m */,
+				CE71A53815F75CF400FE4DC3 /* second.png */,
+				CE71A53A15F75CF400FE4DC3 /* second@2x.png */,
+				CE71A52015F75CF300FE4DC3 /* Supporting Files */,
+			);
+			path = scanorama;
+			sourceTree = "<group>";
+		};
+		CE71A52015F75CF300FE4DC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE71A52115F75CF300FE4DC3 /* scanorama-Info.plist */,
+				CE71A52215F75CF300FE4DC3 /* InfoPlist.strings */,
+				CE71A52515F75CF300FE4DC3 /* main.m */,
+				CE71A52715F75CF300FE4DC3 /* scanorama-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE71A51415F75CF300FE4DC3 /* scanorama */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE71A53E15F75CF400FE4DC3 /* Build configuration list for PBXNativeTarget "scanorama" */;
+			buildPhases = (
+				CE71A51115F75CF300FE4DC3 /* Sources */,
+				CE71A51215F75CF300FE4DC3 /* Frameworks */,
+				CE71A51315F75CF300FE4DC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = scanorama;
+			productName = scanorama;
+			productReference = CE71A51515F75CF300FE4DC3 /* scanorama.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE71A50C15F75CF300FE4DC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = CE71A50F15F75CF300FE4DC3 /* Build configuration list for PBXProject "scanorama" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE71A50A15F75CF300FE4DC3;
+			productRefGroup = CE71A51615F75CF300FE4DC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE71A51415F75CF300FE4DC3 /* scanorama */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE71A51315F75CF300FE4DC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE71A52415F75CF300FE4DC3 /* InfoPlist.strings in Resources */,
+				CE71A52D15F75CF400FE4DC3 /* MainStoryboard.storyboard in Resources */,
+				CE71A53215F75CF400FE4DC3 /* first.png in Resources */,
+				CE71A53415F75CF400FE4DC3 /* first@2x.png in Resources */,
+				CE71A53915F75CF400FE4DC3 /* second.png in Resources */,
+				CE71A53B15F75CF400FE4DC3 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE71A51115F75CF300FE4DC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE71A52615F75CF300FE4DC3 /* main.m in Sources */,
+				CE71A52A15F75CF300FE4DC3 /* SCAppDelegate.m in Sources */,
+				CE71A53015F75CF400FE4DC3 /* SCFirstViewController.m in Sources */,
+				CE71A53715F75CF400FE4DC3 /* SCSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE71A52215F75CF300FE4DC3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE71A52315F75CF300FE4DC3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE71A52B15F75CF400FE4DC3 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE71A52C15F75CF400FE4DC3 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE71A53C15F75CF400FE4DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE71A53D15F75CF400FE4DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE71A53F15F75CF400FE4DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "scanorama/scanorama-Prefix.pch";
+				INFOPLIST_FILE = "scanorama/scanorama-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE71A54015F75CF400FE4DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "scanorama/scanorama-Prefix.pch";
+				INFOPLIST_FILE = "scanorama/scanorama-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE71A50F15F75CF300FE4DC3 /* Build configuration list for PBXProject "scanorama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE71A53C15F75CF400FE4DC3 /* Debug */,
+				CE71A53D15F75CF400FE4DC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE71A53E15F75CF400FE4DC3 /* Build configuration list for PBXNativeTarget "scanorama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE71A53F15F75CF400FE4DC3 /* Debug */,
+				CE71A54015F75CF400FE4DC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE71A50C15F75CF300FE4DC3 /* Project object */;
+}
