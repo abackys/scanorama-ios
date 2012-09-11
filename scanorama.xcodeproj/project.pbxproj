@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6C937815F8E3F300B907CE /* SCLandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */; };
+		CE6C9F4515FF3C0D00BEE44A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE6C9F4315FF3C0D00BEE44A /* Model.xcdatamodeld */; };
+		CE6E996815FE214400DBCA0D /* 46-movie.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996415FE214400DBCA0D /* 46-movie.png */; };
+		CE6E996915FE214400DBCA0D /* light_list.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996515FE214400DBCA0D /* light_list.png */; };
+		CE6E996E15FE260400DBCA0D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996D15FE260400DBCA0D /* star@2x.png */; };
+		CE6E997015FE268B00DBCA0D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996F15FE268B00DBCA0D /* star.png */; };
+		CE6E997415FE347900DBCA0D /* SCMovieData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E997315FE347900DBCA0D /* SCMovieData.m */; };
+		CE6E997E15FE4DAF00DBCA0D /* god80x80.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE6E997B15FE4DAF00DBCA0D /* god80x80.jpeg */; };
+		CE6E997F15FE4DAF00DBCA0D /* mib80x80.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE6E997C15FE4DAF00DBCA0D /* mib80x80.jpeg */; };
+		CE6E998015FE4DAF00DBCA0D /* movie80x80.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE6E997D15FE4DAF00DBCA0D /* movie80x80.gif */; };
 		CE71A51A15F75CF300FE4DC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71A51915F75CF300FE4DC3 /* UIKit.framework */; };
 		CE71A51C15F75CF300FE4DC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71A51B15F75CF300FE4DC3 /* Foundation.framework */; };
 		CE71A51E15F75CF300FE4DC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE71A51D15F75CF300FE4DC3 /* CoreGraphics.framework */; };
@@ -14,15 +24,32 @@
 		CE71A52615F75CF300FE4DC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A52515F75CF300FE4DC3 /* main.m */; };
 		CE71A52A15F75CF300FE4DC3 /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A52915F75CF300FE4DC3 /* SCAppDelegate.m */; };
 		CE71A52D15F75CF400FE4DC3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE71A52B15F75CF400FE4DC3 /* MainStoryboard.storyboard */; };
-		CE71A53015F75CF400FE4DC3 /* SCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A52F15F75CF400FE4DC3 /* SCFirstViewController.m */; };
 		CE71A53215F75CF400FE4DC3 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53115F75CF400FE4DC3 /* first.png */; };
 		CE71A53415F75CF400FE4DC3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53315F75CF400FE4DC3 /* first@2x.png */; };
-		CE71A53715F75CF400FE4DC3 /* SCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71A53615F75CF400FE4DC3 /* SCSecondViewController.m */; };
 		CE71A53915F75CF400FE4DC3 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53815F75CF400FE4DC3 /* second.png */; };
 		CE71A53B15F75CF400FE4DC3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53A15F75CF400FE4DC3 /* second@2x.png */; };
+		CEB8106D15FA432400956FF7 /* SCScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8106C15FA432400956FF7 /* SCScheduleViewController.m */; };
+		CEB8107315FA482800956FF7 /* SCMyProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107215FA482800956FF7 /* SCMyProgramViewController.m */; };
+		CEB8107615FA485B00956FF7 /* SCMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107515FA485B00956FF7 /* SCMoviesViewController.m */; };
+		CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */; };
+		CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8108015FA738900956FF7 /* SCMovieCell.m */; };
+		CECEA45B15FB67D500365ED3 /* Star-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45915FB67D500365ED3 /* Star-256.png */; };
+		CECEA45C15FB67D500365ED3 /* Star-empty-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45A15FB67D500365ED3 /* Star-empty-256.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE6C937615F8E3F300B907CE /* SCLandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLandingPageViewController.h; sourceTree = "<group>"; };
+		CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLandingPageViewController.m; sourceTree = "<group>"; };
+		CE6C9F4415FF3C0D00BEE44A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE6E996415FE214400DBCA0D /* 46-movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "46-movie.png"; path = "assets/icons/tabbar/46-movie.png"; sourceTree = "<group>"; };
+		CE6E996515FE214400DBCA0D /* light_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_list.png; path = assets/icons/tabbar/light_list.png; sourceTree = "<group>"; };
+		CE6E996D15FE260400DBCA0D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "../../../../Dropbox/CrazyImp/scanorama/iOS/icons/tabbar/star@2x.png"; sourceTree = "<group>"; };
+		CE6E996F15FE268B00DBCA0D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../../../Dropbox/CrazyImp/scanorama/iOS/icons/tabbar/star.png; sourceTree = "<group>"; };
+		CE6E997215FE347900DBCA0D /* SCMovieData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieData.h; sourceTree = "<group>"; };
+		CE6E997315FE347900DBCA0D /* SCMovieData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieData.m; sourceTree = "<group>"; };
+		CE6E997B15FE4DAF00DBCA0D /* god80x80.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = god80x80.jpeg; path = assets/Movies/Thumbs/god80x80.jpeg; sourceTree = "<group>"; };
+		CE6E997C15FE4DAF00DBCA0D /* mib80x80.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mib80x80.jpeg; path = assets/Movies/Thumbs/mib80x80.jpeg; sourceTree = "<group>"; };
+		CE6E997D15FE4DAF00DBCA0D /* movie80x80.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = movie80x80.gif; path = assets/Movies/Thumbs/movie80x80.gif; sourceTree = "<group>"; };
 		CE71A51515F75CF300FE4DC3 /* scanorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scanorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE71A51915F75CF300FE4DC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE71A51B15F75CF300FE4DC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,14 +61,22 @@
 		CE71A52815F75CF300FE4DC3 /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
 		CE71A52915F75CF300FE4DC3 /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
 		CE71A52C15F75CF400FE4DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CE71A52E15F75CF400FE4DC3 /* SCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCFirstViewController.h; sourceTree = "<group>"; };
-		CE71A52F15F75CF400FE4DC3 /* SCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCFirstViewController.m; sourceTree = "<group>"; };
 		CE71A53115F75CF400FE4DC3 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		CE71A53315F75CF400FE4DC3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		CE71A53515F75CF400FE4DC3 /* SCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSecondViewController.h; sourceTree = "<group>"; };
-		CE71A53615F75CF400FE4DC3 /* SCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSecondViewController.m; sourceTree = "<group>"; };
 		CE71A53815F75CF400FE4DC3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		CE71A53A15F75CF400FE4DC3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		CEB8106B15FA432400956FF7 /* SCScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCScheduleViewController.h; sourceTree = "<group>"; };
+		CEB8106C15FA432400956FF7 /* SCScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCScheduleViewController.m; sourceTree = "<group>"; };
+		CEB8107115FA482800956FF7 /* SCMyProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMyProgramViewController.h; sourceTree = "<group>"; };
+		CEB8107215FA482800956FF7 /* SCMyProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMyProgramViewController.m; sourceTree = "<group>"; };
+		CEB8107415FA485B00956FF7 /* SCMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMoviesViewController.h; sourceTree = "<group>"; };
+		CEB8107515FA485B00956FF7 /* SCMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMoviesViewController.m; sourceTree = "<group>"; };
+		CEB8107715FA57C200956FF7 /* SCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTabBarViewController.h; sourceTree = "<group>"; };
+		CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTabBarViewController.m; sourceTree = "<group>"; };
+		CEB8107F15FA738900956FF7 /* SCMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieCell.h; sourceTree = "<group>"; };
+		CEB8108015FA738900956FF7 /* SCMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieCell.m; sourceTree = "<group>"; };
+		CECEA45915FB67D500365ED3 /* Star-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-256.png"; path = "assets/icons/Star-256.png"; sourceTree = "<group>"; };
+		CECEA45A15FB67D500365ED3 /* Star-empty-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-empty-256.png"; path = "assets/icons/Star-empty-256.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +93,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE6C9F4715FF3C2400BEE44A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C9F4315FF3C0D00BEE44A /* Model.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		CE6E996115FE213900DBCA0D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E996F15FE268B00DBCA0D /* star.png */,
+				CE6E996D15FE260400DBCA0D /* star@2x.png */,
+				CE6E996415FE214400DBCA0D /* 46-movie.png */,
+				CE6E996515FE214400DBCA0D /* light_list.png */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		CE6E997115FE33B200DBCA0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E997215FE347900DBCA0D /* SCMovieData.h */,
+				CE6E997315FE347900DBCA0D /* SCMovieData.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CE6E997915FE4C2C00DBCA0D /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E997A15FE4C3700DBCA0D /* Thumbs */,
+			);
+			name = Movies;
+			sourceTree = "<group>";
+		};
+		CE6E997A15FE4C3700DBCA0D /* Thumbs */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E997B15FE4DAF00DBCA0D /* god80x80.jpeg */,
+				CE6E997C15FE4DAF00DBCA0D /* mib80x80.jpeg */,
+				CE6E997D15FE4DAF00DBCA0D /* movie80x80.gif */,
+			);
+			name = Thumbs;
+			sourceTree = "<group>";
+		};
 		CE71A50A15F75CF300FE4DC3 = {
 			isa = PBXGroup;
 			children = (
@@ -88,18 +169,20 @@
 		CE71A51F15F75CF300FE4DC3 /* scanorama */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C9F4715FF3C2400BEE44A /* CoreData */,
+				CE6E997115FE33B200DBCA0D /* Models */,
+				CECEA45615FB67BC00365ED3 /* Assets */,
+				CEB8107E15FA735400956FF7 /* Views */,
+				CEB8106A15FA416200956FF7 /* GUI */,
 				CE71A52815F75CF300FE4DC3 /* SCAppDelegate.h */,
 				CE71A52915F75CF300FE4DC3 /* SCAppDelegate.m */,
-				CE71A52B15F75CF400FE4DC3 /* MainStoryboard.storyboard */,
-				CE71A52E15F75CF400FE4DC3 /* SCFirstViewController.h */,
-				CE71A52F15F75CF400FE4DC3 /* SCFirstViewController.m */,
 				CE71A53115F75CF400FE4DC3 /* first.png */,
 				CE71A53315F75CF400FE4DC3 /* first@2x.png */,
-				CE71A53515F75CF400FE4DC3 /* SCSecondViewController.h */,
-				CE71A53615F75CF400FE4DC3 /* SCSecondViewController.m */,
 				CE71A53815F75CF400FE4DC3 /* second.png */,
 				CE71A53A15F75CF400FE4DC3 /* second@2x.png */,
 				CE71A52015F75CF300FE4DC3 /* Supporting Files */,
+				CEB8107715FA57C200956FF7 /* SCTabBarViewController.h */,
+				CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */,
 			);
 			path = scanorama;
 			sourceTree = "<group>";
@@ -113,6 +196,50 @@
 				CE71A52715F75CF300FE4DC3 /* scanorama-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEB8106A15FA416200956FF7 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				CE71A52B15F75CF400FE4DC3 /* MainStoryboard.storyboard */,
+				CE6C937615F8E3F300B907CE /* SCLandingPageViewController.h */,
+				CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */,
+				CEB8106B15FA432400956FF7 /* SCScheduleViewController.h */,
+				CEB8106C15FA432400956FF7 /* SCScheduleViewController.m */,
+				CEB8107115FA482800956FF7 /* SCMyProgramViewController.h */,
+				CEB8107215FA482800956FF7 /* SCMyProgramViewController.m */,
+				CEB8107415FA485B00956FF7 /* SCMoviesViewController.h */,
+				CEB8107515FA485B00956FF7 /* SCMoviesViewController.m */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		CEB8107E15FA735400956FF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEB8107F15FA738900956FF7 /* SCMovieCell.h */,
+				CEB8108015FA738900956FF7 /* SCMovieCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CECEA45615FB67BC00365ED3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E997915FE4C2C00DBCA0D /* Movies */,
+				CECEA45815FB67CA00365ED3 /* Icons */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		CECEA45815FB67CA00365ED3 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E996115FE213900DBCA0D /* TabBar */,
+				CECEA45915FB67D500365ED3 /* Star-256.png */,
+				CECEA45A15FB67D500365ED3 /* Star-empty-256.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +299,15 @@
 				CE71A53415F75CF400FE4DC3 /* first@2x.png in Resources */,
 				CE71A53915F75CF400FE4DC3 /* second.png in Resources */,
 				CE71A53B15F75CF400FE4DC3 /* second@2x.png in Resources */,
+				CECEA45B15FB67D500365ED3 /* Star-256.png in Resources */,
+				CECEA45C15FB67D500365ED3 /* Star-empty-256.png in Resources */,
+				CE6E996815FE214400DBCA0D /* 46-movie.png in Resources */,
+				CE6E996915FE214400DBCA0D /* light_list.png in Resources */,
+				CE6E996E15FE260400DBCA0D /* star@2x.png in Resources */,
+				CE6E997015FE268B00DBCA0D /* star.png in Resources */,
+				CE6E997E15FE4DAF00DBCA0D /* god80x80.jpeg in Resources */,
+				CE6E997F15FE4DAF00DBCA0D /* mib80x80.jpeg in Resources */,
+				CE6E998015FE4DAF00DBCA0D /* movie80x80.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +320,14 @@
 			files = (
 				CE71A52615F75CF300FE4DC3 /* main.m in Sources */,
 				CE71A52A15F75CF300FE4DC3 /* SCAppDelegate.m in Sources */,
-				CE71A53015F75CF400FE4DC3 /* SCFirstViewController.m in Sources */,
-				CE71A53715F75CF400FE4DC3 /* SCSecondViewController.m in Sources */,
+				CE6C937815F8E3F300B907CE /* SCLandingPageViewController.m in Sources */,
+				CEB8106D15FA432400956FF7 /* SCScheduleViewController.m in Sources */,
+				CEB8107315FA482800956FF7 /* SCMyProgramViewController.m in Sources */,
+				CEB8107615FA485B00956FF7 /* SCMoviesViewController.m in Sources */,
+				CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */,
+				CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */,
+				CE6E997415FE347900DBCA0D /* SCMovieData.m in Sources */,
+				CE6C9F4515FF3C0D00BEE44A /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +439,22 @@
 				CE71A54015F75CF400FE4DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE6C9F4315FF3C0D00BEE44A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE6C9F4415FF3C0D00BEE44A /* Model.xcdatamodel */,
+			);
+			currentVersion = CE6C9F4415FF3C0D00BEE44A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE71A50C15F75CF300FE4DC3 /* Project object */;
 }
