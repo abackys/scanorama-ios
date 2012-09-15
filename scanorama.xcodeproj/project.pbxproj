@@ -39,8 +39,6 @@
 		CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */; };
 		CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8108015FA738900956FF7 /* SCMovieCell.m */; };
 		CEBA611E15FF56090047DA80 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBA611C15FF56090047DA80 /* Database.xcdatamodeld */; };
-		CEBFD67D1604AF77002D7ABE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBFD67B1604AF77002D7ABE /* Model.xcdatamodeld */; };
-		CEBFD6811604AFBC002D7ABE /* scanorama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBFD67F1604AFBB002D7ABE /* scanorama.xcdatamodeld */; };
 		CECEA45B15FB67D500365ED3 /* Star-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45915FB67D500365ED3 /* Star-256.png */; };
 		CECEA45C15FB67D500365ED3 /* Star-empty-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45A15FB67D500365ED3 /* Star-empty-256.png */; };
 /* End PBXBuildFile section */
@@ -94,8 +92,6 @@
 		CEB8107F15FA738900956FF7 /* SCMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieCell.h; sourceTree = "<group>"; };
 		CEB8108015FA738900956FF7 /* SCMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieCell.m; sourceTree = "<group>"; };
 		CEBA611D15FF56090047DA80 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
-		CEBFD67C1604AF77002D7ABE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		CEBFD6801604AFBB002D7ABE /* scanorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = scanorama.xcdatamodel; sourceTree = "<group>"; };
 		CECEA45915FB67D500365ED3 /* Star-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-256.png"; path = "assets/icons/Star-256.png"; sourceTree = "<group>"; };
 		CECEA45A15FB67D500365ED3 /* Star-empty-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-empty-256.png"; path = "assets/icons/Star-empty-256.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,7 +202,6 @@
 		CE71A51F15F75CF300FE4DC3 /* scanorama */ = {
 			isa = PBXGroup;
 			children = (
-				CEBFD67F1604AFBB002D7ABE /* scanorama.xcdatamodeld */,
 				CE6D312C1601F22C00511AF1 /* Utility */,
 				CE6C9F8215FF43C400BEE44A /* CoreData.framework */,
 				CE6C9F4715FF3C2400BEE44A /* CoreData */,
@@ -223,7 +218,6 @@
 				CE71A52015F75CF300FE4DC3 /* Supporting Files */,
 				CEB8107715FA57C200956FF7 /* SCTabBarViewController.h */,
 				CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */,
-				CEBFD67B1604AF77002D7ABE /* Model.xcdatamodeld */,
 			);
 			path = scanorama;
 			sourceTree = "<group>";
@@ -376,8 +370,6 @@
 				CE6C2C62160103B80087CED3 /* SCDateNavigator.m in Sources */,
 				CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */,
 				CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */,
-				CEBFD67D1604AF77002D7ABE /* Model.xcdatamodeld in Sources */,
-				CEBFD6811604AFBC002D7ABE /* scanorama.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,26 +494,6 @@
 			currentVersion = CEBA611D15FF56090047DA80 /* Database.xcdatamodel */;
 			path = Database.xcdatamodeld;
 			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		CEBFD67B1604AF77002D7ABE /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CEBFD67C1604AF77002D7ABE /* Model.xcdatamodel */,
-			);
-			currentVersion = CEBFD67C1604AF77002D7ABE /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		CEBFD67F1604AFBB002D7ABE /* scanorama.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CEBFD6801604AFBB002D7ABE /* scanorama.xcdatamodel */,
-			);
-			currentVersion = CEBFD6801604AFBB002D7ABE /* scanorama.xcdatamodel */;
-			path = scanorama.xcdatamodeld;
-			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
