@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Schedule.h"
+#import "Movies.h"
+#import "SCConfig.h"
 
-@interface SCMyProgramViewController : UITableViewController <UITextFieldDelegate>
+@interface SCMyProgramViewController : UITableViewController <UITextFieldDelegate, NSFetchedResultsControllerDelegate>
+
+
+@property (strong, nonatomic) SCConfig * config;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 -(void) textFieldDidBeginEditing:(UITextField *)textField;
 

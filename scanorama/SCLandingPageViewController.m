@@ -8,6 +8,7 @@
 
 #import "SCLandingPageViewController.h"
 #import "SCScheduleViewController.h"
+#import "SCConfig.h"
 
 @interface SCLandingPageViewController ()
 
@@ -23,6 +24,7 @@
 
 - (void)viewDidLoad
 {
+    
     [[self navigationController] setTitle:@"Landing Page"];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -45,34 +47,41 @@
 
 - (IBAction)landingButton:(UIButton *)sender {
     
-    if(sender == _vilniusButton )
-    NSLog(@"Vilnius");
+    SCConfig *config = [SCConfig sharedInstance];
+    
+    if(sender == _vilniusButton ){
+        NSLog(@"Vilnius");
+        [config setCityId:[NSNumber numberWithInt:1]];
+    }
     else if(sender == _kaunasButton) {
         NSLog(@"Kaunas");
+        [config setCityId:[NSNumber numberWithInt:2]];
     }  
     else if(sender == _klaipedaButton) {
         NSLog(@"Klaipeda");
+        [config setCityId:[NSNumber numberWithInt:3]];
     }  
     else if(sender == _siauliaiButton) {
         NSLog(@"Siauliai");
+        [config setCityId:[NSNumber numberWithInt:4]];
     }
-    
-   // SCFirstViewController * viewContr = [[SCFirstViewController alloc] init];
+
     
     
     //[self setView:(UIView*)viewContr];
     [self performSegueWithIdentifier:@"showSchedule" sender:self];
-    
 
- 
     
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
     if([segue.identifier isEqualToString:@"showSchedule"]){
-         NSLog(@"perejimas");
-        SCScheduleViewController *newController = (SCScheduleViewController *)segue.destinationViewController;
+       
+     //   SCScheduleViewController *scheduleController = (SCScheduleViewController *)segue.destinationViewController;
+     //   if([scheduleController respondsToSelector:@selector(cityToolbarButton) ])
+     //  NSLog(@"%@",scheduleController.cityToolbarButton);
+      
     //    [newController setT]
    //     newController.testInt = [NSNumber numberWithInt:15];
     //    NSLog(@"%@", newController);

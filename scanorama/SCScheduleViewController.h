@@ -8,25 +8,35 @@
 
 #import <UIKit/UIKit.h>
 #import "SCMovieCell.h"
+#import <CoreData/CoreData.h>
+#import "SCDateString.h"
+#import "SCDateNavigator.h"
 
-@interface SCScheduleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SCScheduleViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, 
+NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
 
 
 
 - (IBAction)toggleFavorite:(UIButton *)sender;
 
-@property (strong, nonatomic) NSMutableArray * MoviesArray;
-@property (weak, nonatomic) IBOutlet UILabel *scheduleDate;
-@property (weak, nonatomic) IBOutlet UILabel *scheduleDateEn;
+@property (strong, nonatomic) NSMutableArray * ScheduleArray;
+@property (strong, nonatomic) IBOutlet SCDateNavigator *dateNavigatorView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *cityToolbarButton;
+@property (strong, nonatomic) SCConfig * config;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 - (IBAction)nextDay:(id)sender;
 - (IBAction)previousDay:(id)sender;
+-(void) disableDateNavigationButtons;
+
+-(void)customCell:(SCMovieCell *)cell favoriteButtonClicked:(id)button;
 
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 
-@property (strong, nonatomic) IBOutlet SCMovieCell *movieCell;
+@property (strong, nonatomic) SCDateString * dateString;
 
-
-
+-(NSMutableArray *) getMoviesByDateAndCity:(NSDate *)startDate endDate:(NSDate *)endDate;
 
 
 @end

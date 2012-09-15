@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00F36B1600D6A30084C702 /* SCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00F36A1600D6A30084C702 /* SCDate.m */; };
+		CE6C2C62160103B80087CED3 /* SCDateNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C2C61160103B80087CED3 /* SCDateNavigator.m */; };
+		CE6C74B01600CD160070AF61 /* SCDateString.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C74AF1600CD160070AF61 /* SCDateString.m */; };
 		CE6C937815F8E3F300B907CE /* SCLandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */; };
-		CE6C9F4515FF3C0D00BEE44A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE6C9F4315FF3C0D00BEE44A /* Model.xcdatamodeld */; };
+		CE6C9F8315FF43C400BEE44A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6C9F8215FF43C400BEE44A /* CoreData.framework */; };
+		CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D31291601EC3E00511AF1 /* Schedule.m */; };
+		CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D312E1601F24C00511AF1 /* SCConfig.m */; };
+		CE6DC5071600A3B700A171C2 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC5061600A3B700A171C2 /* Movies.m */; };
 		CE6E996815FE214400DBCA0D /* 46-movie.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996415FE214400DBCA0D /* 46-movie.png */; };
 		CE6E996915FE214400DBCA0D /* light_list.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996515FE214400DBCA0D /* light_list.png */; };
 		CE6E996E15FE260400DBCA0D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996D15FE260400DBCA0D /* star@2x.png */; };
 		CE6E997015FE268B00DBCA0D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996F15FE268B00DBCA0D /* star.png */; };
-		CE6E997415FE347900DBCA0D /* SCMovieData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6E997315FE347900DBCA0D /* SCMovieData.m */; };
 		CE6E997E15FE4DAF00DBCA0D /* god80x80.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE6E997B15FE4DAF00DBCA0D /* god80x80.jpeg */; };
 		CE6E997F15FE4DAF00DBCA0D /* mib80x80.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE6E997C15FE4DAF00DBCA0D /* mib80x80.jpeg */; };
 		CE6E998015FE4DAF00DBCA0D /* movie80x80.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE6E997D15FE4DAF00DBCA0D /* movie80x80.gif */; };
@@ -33,20 +38,33 @@
 		CEB8107615FA485B00956FF7 /* SCMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107515FA485B00956FF7 /* SCMoviesViewController.m */; };
 		CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */; };
 		CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8108015FA738900956FF7 /* SCMovieCell.m */; };
+		CEBA611E15FF56090047DA80 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBA611C15FF56090047DA80 /* Database.xcdatamodeld */; };
+		CEBFD67D1604AF77002D7ABE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBFD67B1604AF77002D7ABE /* Model.xcdatamodeld */; };
+		CEBFD6811604AFBC002D7ABE /* scanorama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBFD67F1604AFBB002D7ABE /* scanorama.xcdatamodeld */; };
 		CECEA45B15FB67D500365ED3 /* Star-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45915FB67D500365ED3 /* Star-256.png */; };
 		CECEA45C15FB67D500365ED3 /* Star-empty-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45A15FB67D500365ED3 /* Star-empty-256.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE00F3691600D6A30084C702 /* SCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDate.h; sourceTree = "<group>"; };
+		CE00F36A1600D6A30084C702 /* SCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDate.m; sourceTree = "<group>"; };
+		CE6C2C60160103B80087CED3 /* SCDateNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDateNavigator.h; sourceTree = "<group>"; };
+		CE6C2C61160103B80087CED3 /* SCDateNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDateNavigator.m; sourceTree = "<group>"; };
+		CE6C74AE1600CD160070AF61 /* SCDateString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDateString.h; sourceTree = "<group>"; };
+		CE6C74AF1600CD160070AF61 /* SCDateString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDateString.m; sourceTree = "<group>"; };
 		CE6C937615F8E3F300B907CE /* SCLandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLandingPageViewController.h; sourceTree = "<group>"; };
 		CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLandingPageViewController.m; sourceTree = "<group>"; };
-		CE6C9F4415FF3C0D00BEE44A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE6C9F8215FF43C400BEE44A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE6D31281601EC3E00511AF1 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		CE6D31291601EC3E00511AF1 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		CE6D312D1601F24C00511AF1 /* SCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCConfig.h; sourceTree = "<group>"; };
+		CE6D312E1601F24C00511AF1 /* SCConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCConfig.m; sourceTree = "<group>"; };
+		CE6DC5051600A3B700A171C2 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
+		CE6DC5061600A3B700A171C2 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		CE6E996415FE214400DBCA0D /* 46-movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "46-movie.png"; path = "assets/icons/tabbar/46-movie.png"; sourceTree = "<group>"; };
 		CE6E996515FE214400DBCA0D /* light_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_list.png; path = assets/icons/tabbar/light_list.png; sourceTree = "<group>"; };
 		CE6E996D15FE260400DBCA0D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "../../../../Dropbox/CrazyImp/scanorama/iOS/icons/tabbar/star@2x.png"; sourceTree = "<group>"; };
 		CE6E996F15FE268B00DBCA0D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../../../Dropbox/CrazyImp/scanorama/iOS/icons/tabbar/star.png; sourceTree = "<group>"; };
-		CE6E997215FE347900DBCA0D /* SCMovieData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieData.h; sourceTree = "<group>"; };
-		CE6E997315FE347900DBCA0D /* SCMovieData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieData.m; sourceTree = "<group>"; };
 		CE6E997B15FE4DAF00DBCA0D /* god80x80.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = god80x80.jpeg; path = assets/Movies/Thumbs/god80x80.jpeg; sourceTree = "<group>"; };
 		CE6E997C15FE4DAF00DBCA0D /* mib80x80.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mib80x80.jpeg; path = assets/Movies/Thumbs/mib80x80.jpeg; sourceTree = "<group>"; };
 		CE6E997D15FE4DAF00DBCA0D /* movie80x80.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = movie80x80.gif; path = assets/Movies/Thumbs/movie80x80.gif; sourceTree = "<group>"; };
@@ -75,6 +93,9 @@
 		CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTabBarViewController.m; sourceTree = "<group>"; };
 		CEB8107F15FA738900956FF7 /* SCMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieCell.h; sourceTree = "<group>"; };
 		CEB8108015FA738900956FF7 /* SCMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieCell.m; sourceTree = "<group>"; };
+		CEBA611D15FF56090047DA80 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		CEBFD67C1604AF77002D7ABE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CEBFD6801604AFBB002D7ABE /* scanorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = scanorama.xcdatamodel; sourceTree = "<group>"; };
 		CECEA45915FB67D500365ED3 /* Star-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-256.png"; path = "assets/icons/Star-256.png"; sourceTree = "<group>"; };
 		CECEA45A15FB67D500365ED3 /* Star-empty-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-empty-256.png"; path = "assets/icons/Star-empty-256.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6C9F8315FF43C400BEE44A /* CoreData.framework in Frameworks */,
 				CE71A51A15F75CF300FE4DC3 /* UIKit.framework in Frameworks */,
 				CE71A51C15F75CF300FE4DC3 /* Foundation.framework in Frameworks */,
 				CE71A51E15F75CF300FE4DC3 /* CoreGraphics.framework in Frameworks */,
@@ -96,9 +118,22 @@
 		CE6C9F4715FF3C2400BEE44A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				CE6C9F4315FF3C0D00BEE44A /* Model.xcdatamodeld */,
+				CEBA611C15FF56090047DA80 /* Database.xcdatamodeld */,
+				CE6D31281601EC3E00511AF1 /* Schedule.h */,
+				CE6D31291601EC3E00511AF1 /* Schedule.m */,
+				CE6DC5051600A3B700A171C2 /* Movies.h */,
+				CE6DC5061600A3B700A171C2 /* Movies.m */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		CE6D312C1601F22C00511AF1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CE6D312D1601F24C00511AF1 /* SCConfig.h */,
+				CE6D312E1601F24C00511AF1 /* SCConfig.m */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		CE6E996115FE213900DBCA0D /* TabBar */ = {
@@ -115,8 +150,10 @@
 		CE6E997115FE33B200DBCA0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E997215FE347900DBCA0D /* SCMovieData.h */,
-				CE6E997315FE347900DBCA0D /* SCMovieData.m */,
+				CE6C74AE1600CD160070AF61 /* SCDateString.h */,
+				CE6C74AF1600CD160070AF61 /* SCDateString.m */,
+				CE00F3691600D6A30084C702 /* SCDate.h */,
+				CE00F36A1600D6A30084C702 /* SCDate.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -169,6 +206,9 @@
 		CE71A51F15F75CF300FE4DC3 /* scanorama */ = {
 			isa = PBXGroup;
 			children = (
+				CEBFD67F1604AFBB002D7ABE /* scanorama.xcdatamodeld */,
+				CE6D312C1601F22C00511AF1 /* Utility */,
+				CE6C9F8215FF43C400BEE44A /* CoreData.framework */,
 				CE6C9F4715FF3C2400BEE44A /* CoreData */,
 				CE6E997115FE33B200DBCA0D /* Models */,
 				CECEA45615FB67BC00365ED3 /* Assets */,
@@ -183,6 +223,7 @@
 				CE71A52015F75CF300FE4DC3 /* Supporting Files */,
 				CEB8107715FA57C200956FF7 /* SCTabBarViewController.h */,
 				CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */,
+				CEBFD67B1604AF77002D7ABE /* Model.xcdatamodeld */,
 			);
 			path = scanorama;
 			sourceTree = "<group>";
@@ -219,6 +260,8 @@
 			children = (
 				CEB8107F15FA738900956FF7 /* SCMovieCell.h */,
 				CEB8108015FA738900956FF7 /* SCMovieCell.m */,
+				CE6C2C60160103B80087CED3 /* SCDateNavigator.h */,
+				CE6C2C61160103B80087CED3 /* SCDateNavigator.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -326,8 +369,15 @@
 				CEB8107615FA485B00956FF7 /* SCMoviesViewController.m in Sources */,
 				CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */,
 				CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */,
-				CE6E997415FE347900DBCA0D /* SCMovieData.m in Sources */,
-				CE6C9F4515FF3C0D00BEE44A /* Model.xcdatamodeld in Sources */,
+				CEBA611E15FF56090047DA80 /* Database.xcdatamodeld in Sources */,
+				CE6DC5071600A3B700A171C2 /* Movies.m in Sources */,
+				CE6C74B01600CD160070AF61 /* SCDateString.m in Sources */,
+				CE00F36B1600D6A30084C702 /* SCDate.m in Sources */,
+				CE6C2C62160103B80087CED3 /* SCDateNavigator.m in Sources */,
+				CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */,
+				CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */,
+				CEBFD67D1604AF77002D7ABE /* Model.xcdatamodeld in Sources */,
+				CEBFD6811604AFBC002D7ABE /* scanorama.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,14 +494,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE6C9F4315FF3C0D00BEE44A /* Model.xcdatamodeld */ = {
+		CEBA611C15FF56090047DA80 /* Database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE6C9F4415FF3C0D00BEE44A /* Model.xcdatamodel */,
+				CEBA611D15FF56090047DA80 /* Database.xcdatamodel */,
 			);
-			currentVersion = CE6C9F4415FF3C0D00BEE44A /* Model.xcdatamodel */;
+			currentVersion = CEBA611D15FF56090047DA80 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		CEBFD67B1604AF77002D7ABE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEBFD67C1604AF77002D7ABE /* Model.xcdatamodel */,
+			);
+			currentVersion = CEBFD67C1604AF77002D7ABE /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		CEBFD67F1604AFBB002D7ABE /* scanorama.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEBFD6801604AFBB002D7ABE /* scanorama.xcdatamodel */,
+			);
+			currentVersion = CEBFD6801604AFBB002D7ABE /* scanorama.xcdatamodel */;
+			path = scanorama.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

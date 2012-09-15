@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="A8b-4w-crp">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -242,7 +242,7 @@
                         </userGuides>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="hxA-AS-Ijk">
+                            <view contentMode="scaleToFill" id="hxA-AS-Ijk" customClass="SCDateNavigator">
                                 <rect key="frame" x="0.0" y="44" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -292,6 +292,12 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="vXR-gY-rg4" id="arM-iO-dNf"/>
+                                    <outlet property="dateLabelEn" destination="zvy-Ws-V6q" id="oCY-OW-uQB"/>
+                                    <outlet property="nextButton" destination="iym-aY-Vn8" id="3QZ-wP-6lT"/>
+                                    <outlet property="previousButton" destination="Xcg-fC-3ef" id="5VM-eA-cgj"/>
+                                </connections>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="EXz-f8-YE4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -301,7 +307,7 @@
                                     <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Ayn-3e-Xga"/>
                                     <barButtonItem title="Item" style="plain" id="KFn-eW-2Hq">
                                         <view key="customView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kK5-vV-IV8">
-                                            <rect key="frame" x="32" y="2" width="198" height="40"/>
+                                            <rect key="frame" x="32" y="2" width="180" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Repertuaras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0aY-lv-ga0">
@@ -317,7 +323,7 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YBa-1d-OHQ"/>
-                                    <barButtonItem title="Item" id="uX0-kj-FZ1">
+                                    <barButtonItem title="Miestas" id="uX0-kj-FZ1">
                                         <connections>
                                             <segue destination="kEC-vu-TqG" kind="push" id="lCp-dy-zbP"/>
                                         </connections>
@@ -385,6 +391,7 @@
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="favoriteButtonClicked:" destination="8wv-JJ-0w2" eventType="touchUpInside" id="G24-o1-mpG"/>
                                                         <action selector="toggleFavorite:" destination="e7Q-F4-u5q" eventType="touchUpInside" id="CvP-58-1k3"/>
                                                     </connections>
                                                 </button>
@@ -410,8 +417,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Repertuaras" image="light_list.png" id="Zje-Wx-5Py"/>
                     <connections>
-                        <outlet property="scheduleDate" destination="vXR-gY-rg4" id="WNg-35-GnQ"/>
-                        <outlet property="scheduleDateEn" destination="zvy-Ws-V6q" id="WBU-j2-BYG"/>
+                        <outlet property="cityToolbarButton" destination="uX0-kj-FZ1" id="VUS-rz-M4h"/>
+                        <outlet property="dateNavigatorView" destination="hxA-AS-Ijk" id="rsh-wZ-X97"/>
+                        <outlet property="scheduleTableView" destination="zLS-YZ-LIS" id="kE7-dP-644"/>
                     </connections>
                 </viewController>
             </objects>
@@ -447,9 +455,64 @@
         <image name="second@2x.png" width="60" height="60"/>
         <image name="star.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="SCDateNavigator" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCDateNavigator.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabelEn" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="previousButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCLandingPageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCLandingPageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="landingButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="kaunasButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="klaipedaButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="siauliaiButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="vilniusButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCMovieCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMovieCell.h"/>
+            <relationships>
+                <relationship kind="action" name="favoriteButtonClicked:"/>
+                <relationship kind="outlet" name="favoriteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="movieEnLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="movieLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thumbImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SCMoviesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMoviesViewController.h"/>
+        </class>
+        <class className="SCMyProgramViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMyProgramViewController.h"/>
+        </class>
+        <class className="SCScheduleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCScheduleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextDay:"/>
+                <relationship kind="action" name="previousDay:"/>
+                <relationship kind="action" name="toggleFavorite:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cityToolbarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="dateNavigatorView" candidateClass="SCDateNavigator"/>
+                <relationship kind="outlet" name="scheduleTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SCTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCTabBarViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ruf-sQ-Akh"/>
+    </inferredMetricsTieBreakers>
 </document>

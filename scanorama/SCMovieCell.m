@@ -10,11 +10,14 @@
 
 @implementation SCMovieCell
 
+@synthesize delegate = _delegate;
+
 @synthesize timeLabel = _timeLabel;
 @synthesize movieLabel = _movieLabel;
 @synthesize movieEnLabel = _movieEnLabel;
 @synthesize favoriteButton = _favoriteButton;
 @synthesize thumbImage = _thumbImage;
+@synthesize cinema = _cinema;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -41,5 +44,11 @@
 
     // Configure the view for the selected state
 }
+
+-(void) favoriteButtonClicked:(id)sender {
+    [self.delegate movieCell:self favoriteButtonClicked:sender];
+}
+
+
 
 @end

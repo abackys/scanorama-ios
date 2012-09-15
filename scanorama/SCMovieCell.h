@@ -8,13 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCMovieCell : UITableViewCell
+@protocol FavoriteButtonDelegate 
+
+
+-(void)movieCell:(UITableViewCell *)cell favoriteButtonClicked:(UIButton *)button;
+
+@end
+
+@interface SCMovieCell : UITableViewCell 
+
+
+@property (assign) id<FavoriteButtonDelegate> delegate;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *movieLabel;
 @property (weak, nonatomic) IBOutlet UILabel *movieEnLabel;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImage;
+@property (weak, nonatomic) NSString *cinema;
+-(IBAction)favoriteButtonClicked:(id)sender;
 
 
 @end
