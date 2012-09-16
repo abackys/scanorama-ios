@@ -18,6 +18,8 @@
 @synthesize favoriteButton = _favoriteButton;
 @synthesize thumbImage = _thumbImage;
 @synthesize cinema = _cinema;
+@synthesize city = _city;
+@synthesize date = _date;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

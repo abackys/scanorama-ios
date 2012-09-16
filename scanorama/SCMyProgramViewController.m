@@ -8,6 +8,7 @@
 
 #import "SCMyProgramViewController.h"
 #import "SCAppDelegate.h"
+#import "SCDateString.h"
 
 @interface SCMyProgramViewController ()
 
@@ -19,6 +20,10 @@
 @synthesize config = _config;
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize favoriteMovieArray = _favoriteMovieArray;
+@synthesize scheduleView = _scheduleView;
+@synthesize myProgramTableView = _myProgramTableView;
+
+
 
 
 - (void)viewDidLoad
@@ -37,7 +42,9 @@
 
 - (void)viewDidUnload
 {
-
+    _scheduleView = [[SCScheduleViewController alloc] init];
+    
+ 
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,14 +55,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(void) textFieldDidBeginEditing:(UITextField *)textField {
-    NSLog(@"Bujawawa");
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    _favoriteMovieArray = [[NSMutableArray alloc] init];
+    _favoriteMovieArray = [[NSMutableArray alloc] init];   
     [self getFavoriteMoviesArray];
+    [_myProgramTableView reloadData];
     NSLog(@"MyProgramView");
     
     [super viewWillAppear:animated];
@@ -120,44 +125,54 @@
     Schedule *tempSchedule = (Schedule *) [moviesArray objectAtIndex:0];
     NSDate *lastDate = tempSchedule.date;
      for (Schedule *scheduleData in moviesArray) {
-         
-      //   [_favoriteMovieArray addObject:model];    
-     
      
      // Preparing dates for comparing YY-MM-DD only    
-       //  NSDateComponents *lastDateComp = [calendar components:flags fromDate:lastDate];
-       //  NSDate lastDate = [calendar dateFromComponents:lastDateComp];
          
          lastDateInt = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSEraCalendarUnit forDate:lastDate];
           currentDateInt = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSEraCalendarUnit forDate:scheduleData.date];
          
     //     NSLog(@"%i  currentDate: %i",lastDateInt, currentDateInt);
          if(currentDateInt != lastDateInt){
-             NSLog(@"Last date %@ , CurrentDate: %@", lastDate, scheduleData.date);
-             NSLog(@"%i", sectionArray.count);
+
               [_favoriteMovieArray addObject: [sectionArray copy]];
-              NSLog(@"SectionArray %i", [sectionArray count]);
+        //      NSLog(@"SectionArray %i", [sectionArray count]);
              [sectionArray removeAllObjects];
          }
          [sectionArray addObject:scheduleData];
          lastDate = scheduleData.date;
      
      } 
-         NSLog(@"SectionArray %i", [sectionArray count]);
+       
     [_favoriteMovieArray addObject:[sectionArray copy] ];
-    
-    for(NSMutableArray *array in _favoriteMovieArray){
-        NSLog(@"QQQQQ%i", [array count]);
-    }
-    NSLog(@"Favorite Array : %i", _favoriteMovieArray.count);
+
      
 }
+
+-(void)movieCell:(UITableViewCell *)cell favoriteButtonClicked:(UIButton *)button {
+    SCMovieCell *movieCell = (SCMovieCell *)cell;
+
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:!button.selected] forKey:@"favoriteButton"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeFavoriteValue" object:movieCell userInfo:dict];
+    
+    
+ //   NSLog(@"%@", movieCell.timeLabel.text);
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    Schedule * scheduleData =  [[_favoriteMovieArray objectAtIndex:section ] firstObject ];
+    SCDateString *dateString = [[SCDateString alloc] initWithPredefinedData];
+    
+    return [dateString getDateStringsByDate:scheduleData.date].dateStringLt;
+    
+}
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+  NSLog(@"EWEWEWEWEWEWE: %i", _favoriteMovieArray.count);
     // Return the number of sections.
     return _favoriteMovieArray.count;
 }
@@ -165,11 +180,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    // Return the number of rows in the section.
-   // NSLog(@"WEWEWE: %@", [_favoriteMovieArray lastObject]);
-    for(NSMutableArray *array in _favoriteMovieArray){
-        NSLog(@"%i", [array count]);
-    }
     
     NSArray *sectionData = (NSArray *) [_favoriteMovieArray objectAtIndex:section ];
       NSLog(@"NumberOFrow: %i at section: %i", sectionData.count, section);
@@ -178,13 +188,43 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MovieCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+ //   NSLog(@"%@", [indexPath ]);
+      NSLog(@"MyPqqqrogramView");
+    NSDateFormatter * hours_minutes =  [[NSDateFormatter alloc ] init ];
+    [hours_minutes setDateFormat:@"HH:mm"];
     
+    NSArray *sectionArray = [_favoriteMovieArray objectAtIndex:indexPath.section];
+    Schedule * schedule = [sectionArray objectAtIndex:indexPath.row];
+    static NSString *CellIdentifier = @"MovieCell";
+    SCMovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    cell.delegate = self;
+    cell.movieLabel.text = schedule.movie.title;
+    cell.movieEnLabel.text = schedule.movie.titleEn;
+    cell.favoriteButton.selected = [schedule.favorite boolValue];
+    cell.timeLabel.text = [ hours_minutes  stringFromDate:schedule.date];
+    cell.thumbImage.image = [UIImage imageNamed:schedule.movie.thumbImage];
+    cell.cinema = schedule.cinema;
+    cell.city = schedule.city;
+    cell.date = schedule.date;
+  
+  
     // Configure the cell...
     
     return cell;
 }
+
+-(IBAction)toggleFavorite:(UIButton *)sender {
+    //  NSLog(@"%@",[sender parentViewController]);
+    if(sender.selected){
+        sender.selected = NO;
+    }
+    else {
+        sender.selected = YES;
+    }
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @protocol FavoriteButtonDelegate 
 
 
@@ -18,6 +19,7 @@
 @interface SCMovieCell : UITableViewCell 
 
 
+
 @property (assign) id<FavoriteButtonDelegate> delegate;
 
 
@@ -26,7 +28,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *movieEnLabel;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImage;
-@property (weak, nonatomic) NSString *cinema;
+@property (strong, nonatomic) NSString *cinema;
+@property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSString *city;
 -(IBAction)favoriteButtonClicked:(id)sender;
 
 

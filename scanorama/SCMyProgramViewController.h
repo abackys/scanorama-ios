@@ -11,6 +11,8 @@
 #import "Movies.h"
 #import "SCConfig.h"
 #import "SCMovieCell.h"
+#import "SCScheduleViewController.h"
+
 
 @interface SCMyProgramViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
 
@@ -19,6 +21,9 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSMutableArray *favoriteMovieArray; 
+@property (strong, nonatomic) SCScheduleViewController *scheduleView;
+@property (strong, nonatomic) IBOutlet UITableView *myProgramTableView;
+
 
 
 

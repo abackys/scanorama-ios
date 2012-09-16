@@ -51,6 +51,7 @@
 {
 
   //  [self configureView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFavoriteNotification:) name:@"changeFavoriteValue" object:nil];
     
      _dateString = [[SCDateString alloc] initWithPredefinedData];
 
@@ -238,16 +239,15 @@
 -(void)movieCell:(UITableViewCell *)cell favoriteButtonClicked:(UIButton *)button {
     SCMovieCell *movieCell = (SCMovieCell *)cell;
  //   NSLog(@"selected: %@", [NSNumber numberWithBool:button.selected]);
-    NSDate * movieDate = [self combineDateWithTime: _dateString.getCurrentDate.date movieTime:movieCell.timeLabel.text];
+    NSDate * movieDate = [self combineDateWithTime: movieCell.date movieTime:movieCell.timeLabel.text];
 
-    [self insertFavoriteToDatabase:movieDate byCity:[_config getCityName] byCinema:movieCell.cinema favoriteState:[NSNumber numberWithBool:!button.selected]];
+    [self insertFavoriteToDatabase:movieDate byCity:movieCell.city byCinema:movieCell.cinema favoriteState:[NSNumber numberWithBool:!button.selected]];
    
-    
-    NSLog(@"%@", movieDate);
+
 }
 
 -(void) insertFavoriteToDatabase:(NSDate *)date byCity:(NSString *)city byCinema:(NSString *)cinema favoriteState:(NSNumber *)favorite{
-
+NSLog(@"Favorite: BUJAKAKAKAK");
     NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
@@ -262,7 +262,7 @@
     
     
     Schedule *scheduleRow = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-    NSLog(@"%@", scheduleRow.favorite);
+    NSLog(@"Favorite: %@", scheduleRow.favorite);
     scheduleRow.favorite = favorite;
     
     error = nil;
@@ -273,6 +273,16 @@
     
    // return [NSMutableArray arrayWithArray:fetchedObjects];
     
+}
+
+-(void)changeFavoriteNotification:(NSNotification *)pNotification {
+    SCMovieCell *movieCell = [pNotification object];
+    
+    NSNumber *favorite =  [[pNotification userInfo] valueForKey:@"favoriteButton"];
+    [self insertFavoriteToDatabase:movieCell.date byCity:movieCell.city byCinema:movieCell.cinema favoriteState:favorite];
+    NSLog(@"%@", favorite);
+   // NSLog(@"wwew %@", (NSString*) [pNotification object]);
+
 }
 
 
@@ -315,6 +325,9 @@
     cell.timeLabel.text = [ hours_minutes  stringFromDate:schedule.date];
     cell.thumbImage.image = [UIImage imageNamed:schedule.movie.thumbImage];
     cell.cinema = schedule.cinema;
+    cell.city = schedule.city;
+   
+    cell.date = schedule.date;
     
     //cell.favoriteButton.selected = [movieData.inFavorite boolValue];
     
@@ -332,6 +345,7 @@
     else {
         sender.selected = YES;
     }
+      [[NSNotificationCenter defaultCenter] postNotificationName:@"changeFavoriteValue" object:nil];
 }
 
 
@@ -362,7 +376,8 @@
         [_ScheduleArray addObject:model];
      
     } 
-   
+   Schedule *schedule = [_ScheduleArray lastObject];
+    NSLog(@"%@",schedule.date);
     return [NSMutableArray arrayWithArray:fetchedObjects];
 }
 

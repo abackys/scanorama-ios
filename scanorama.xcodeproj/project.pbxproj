@@ -39,6 +39,7 @@
 		CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */; };
 		CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8108015FA738900956FF7 /* SCMovieCell.m */; };
 		CEBA611E15FF56090047DA80 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBA611C15FF56090047DA80 /* Database.xcdatamodeld */; };
+		CEBDF43B1605EEAB00571282 /* FavoriteButtonDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDF43A1605EEAB00571282 /* FavoriteButtonDelegate.m */; };
 		CECEA45B15FB67D500365ED3 /* Star-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45915FB67D500365ED3 /* Star-256.png */; };
 		CECEA45C15FB67D500365ED3 /* Star-empty-256.png in Resources */ = {isa = PBXBuildFile; fileRef = CECEA45A15FB67D500365ED3 /* Star-empty-256.png */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		CEB8107F15FA738900956FF7 /* SCMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieCell.h; sourceTree = "<group>"; };
 		CEB8108015FA738900956FF7 /* SCMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieCell.m; sourceTree = "<group>"; };
 		CEBA611D15FF56090047DA80 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		CEBDF4391605EEAB00571282 /* FavoriteButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteButtonDelegate.h; sourceTree = "<group>"; };
+		CEBDF43A1605EEAB00571282 /* FavoriteButtonDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteButtonDelegate.m; sourceTree = "<group>"; };
 		CECEA45915FB67D500365ED3 /* Star-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-256.png"; path = "assets/icons/Star-256.png"; sourceTree = "<group>"; };
 		CECEA45A15FB67D500365ED3 /* Star-empty-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star-empty-256.png"; path = "assets/icons/Star-empty-256.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +221,8 @@
 				CE71A52015F75CF300FE4DC3 /* Supporting Files */,
 				CEB8107715FA57C200956FF7 /* SCTabBarViewController.h */,
 				CEB8107815FA57C200956FF7 /* SCTabBarViewController.m */,
+				CEBDF4391605EEAB00571282 /* FavoriteButtonDelegate.h */,
+				CEBDF43A1605EEAB00571282 /* FavoriteButtonDelegate.m */,
 			);
 			path = scanorama;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				CE6C2C62160103B80087CED3 /* SCDateNavigator.m in Sources */,
 				CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */,
 				CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */,
+				CEBDF43B1605EEAB00571282 /* FavoriteButtonDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

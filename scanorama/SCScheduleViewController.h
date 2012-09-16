@@ -29,7 +29,8 @@ NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
 - (IBAction)nextDay:(id)sender;
 - (IBAction)previousDay:(id)sender;
 -(void) disableDateNavigationButtons;
-
+-(NSDate *) combineDateWithTime:(NSDate *)selectedDate movieTime:(NSString *)movieTime;
+-(void) insertFavoriteToDatabase:(NSDate *)date byCity:(NSString *)city byCinema:(NSString *)cinema favoriteState:(NSNumber *)favorite;
 
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 
