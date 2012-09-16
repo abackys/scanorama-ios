@@ -7,7 +7,7 @@
 //
 
 #import "SCMyProgramViewController.h"
-
+#import "SCAppDelegate.h"
 
 @interface SCMyProgramViewController ()
 
@@ -18,11 +18,14 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize config = _config;
 @synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize favoriteMovieArray = _favoriteMovieArray;
 
 
 - (void)viewDidLoad
 {
-     self.tabBarController.navigationItem.title = @"Mano Programa";
+    
+    SCAppDelegate *app = [UIApplication sharedApplication].delegate;
+    _managedObjectContext = app.managedObjectContext;
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -34,6 +37,7 @@
 
 - (void)viewDidUnload
 {
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -50,6 +54,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    _favoriteMovieArray = [[NSMutableArray alloc] init];
+    [self getFavoriteMoviesArray];
     NSLog(@"MyProgramView");
     
     [super viewWillAppear:animated];
@@ -71,12 +77,13 @@
 }
 
 
--(void) getFavoriteMoviesByCity:(NSString *)city{
+-(void) getFavoriteMoviesArray{
     
     
     NSError *error;
     
     NSManagedObjectContext *context = _managedObjectContext;
+    NSLog(@"%@",context);
     
     NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:TRUE];
     
@@ -86,44 +93,92 @@
     
     NSEntityDescription *entity = [NSEntityDescription 
                                    entityForName:@"Schedule" inManagedObjectContext:context];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(favorite = 1) AND (city=%@)", [_config getCityName]]; 
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"favorite = 1", [_config getCityName]]; 
     
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortByDate]];
     [fetchRequest setEntity:entity];
     [fetchRequest setPredicate:predicate];
     
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-  /*
-    [_ScheduleArray removeAllObjects];
-    for (Schedule *model in fetchedObjects) {
-        [_ScheduleArray addObject:model];
-        
-    } 
-    */
-   // return [NSMutableArray arrayWithArray:fetchedObjects];
+    NSLog(@"fetched: %i",[fetchedObjects count ]);
+    [self addMoviesArrayToSectionsArrays:fetchedObjects];
+    
+    
+    
 
 
+
+}
+
+-(void) addMoviesArrayToSectionsArrays:(NSArray *)moviesArray{
+    unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    int lastDateInt = 0;
+    int currentDateInt = 0;
+    
+    NSMutableArray *sectionArray = [[NSMutableArray alloc] init ];
+    Schedule *tempSchedule = (Schedule *) [moviesArray objectAtIndex:0];
+    NSDate *lastDate = tempSchedule.date;
+     for (Schedule *scheduleData in moviesArray) {
+         
+      //   [_favoriteMovieArray addObject:model];    
+     
+     
+     // Preparing dates for comparing YY-MM-DD only    
+       //  NSDateComponents *lastDateComp = [calendar components:flags fromDate:lastDate];
+       //  NSDate lastDate = [calendar dateFromComponents:lastDateComp];
+         
+         lastDateInt = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSEraCalendarUnit forDate:lastDate];
+          currentDateInt = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSEraCalendarUnit forDate:scheduleData.date];
+         
+    //     NSLog(@"%i  currentDate: %i",lastDateInt, currentDateInt);
+         if(currentDateInt != lastDateInt){
+             NSLog(@"Last date %@ , CurrentDate: %@", lastDate, scheduleData.date);
+             NSLog(@"%i", sectionArray.count);
+              [_favoriteMovieArray addObject: [sectionArray copy]];
+              NSLog(@"SectionArray %i", [sectionArray count]);
+             [sectionArray removeAllObjects];
+         }
+         [sectionArray addObject:scheduleData];
+         lastDate = scheduleData.date;
+     
+     } 
+         NSLog(@"SectionArray %i", [sectionArray count]);
+    [_favoriteMovieArray addObject:[sectionArray copy] ];
+    
+    for(NSMutableArray *array in _favoriteMovieArray){
+        NSLog(@"QQQQQ%i", [array count]);
+    }
+    NSLog(@"Favorite Array : %i", _favoriteMovieArray.count);
+     
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return _favoriteMovieArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+   // NSLog(@"WEWEWE: %@", [_favoriteMovieArray lastObject]);
+    for(NSMutableArray *array in _favoriteMovieArray){
+        NSLog(@"%i", [array count]);
+    }
+    
+    NSArray *sectionData = (NSArray *) [_favoriteMovieArray objectAtIndex:section ];
+      NSLog(@"NumberOFrow: %i at section: %i", sectionData.count, section);
+    return sectionData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"MovieCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...

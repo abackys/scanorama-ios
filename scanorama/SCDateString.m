@@ -79,8 +79,14 @@
 }
 
 -(SCDate *)getDateStringsByDate:(NSDate *)date {
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar ];
+    int lookedUpDateInt = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSEraCalendarUnit forDate:date];
+    int scDateInt = 0;
+
+    
     for(SCDate *scDate in _datesArray ){
-        if([scDate.date isEqualToDate:date ])
+        scDateInt = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSEraCalendarUnit forDate:scDate.date];
+        if(scDateInt == lookedUpDateInt)
             return scDate;
     }
     return [_datesArray objectAtIndex:0];

@@ -9,6 +9,7 @@
 #import "SCAppDelegate.h"
 #import "SCScheduleViewController.h"
 #import <CoreData/CoreData.h>
+#import "SCMyProgramViewController.h"
 
 @implementation SCAppDelegate
 
@@ -143,9 +144,13 @@
     
   
     // End test
-    
+#warning Maybe it is useless
     SCScheduleViewController * scheduleView = [[SCScheduleViewController alloc] init ];
     scheduleView.managedObjectContext = [self managedObjectContext];
+    
+    SCMyProgramViewController * myProgramView = [[SCMyProgramViewController alloc] init ];
+    
+    myProgramView.managedObjectContext = [self managedObjectContext];
     // Override point for customization after application launch.
     return YES;
 }

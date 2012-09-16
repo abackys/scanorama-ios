@@ -65,8 +65,8 @@
     
     
     NSDateComponents *dateComp2 = [[NSDateComponents alloc ] init];
-    [dateComp2 setDay:12]; [dateComp2 setMonth:11]; [dateComp2 setYear:2012];
-    [dateComp2 setHour:13]; [dateComp2 setMinute:20];
+    [dateComp2 setDay:9]; [dateComp2 setMonth:11]; [dateComp2 setYear:2012];
+    [dateComp2 setHour:12]; [dateComp2 setMinute:25];
     
   
 
@@ -88,47 +88,56 @@
 
     NSManagedObjectContext *context = _managedObjectContext;
     
-    
+    /*
     Schedule *scheduleRow = [NSEntityDescription
                              insertNewObjectForEntityForName:@"Schedule" 
                              inManagedObjectContext:context];
-    
+    */
 
-   
-    Movies *movieDB = [NSEntityDescription
+ /*  
+   Movies *movieDB = [NSEntityDescription
                             insertNewObjectForEntityForName:@"Movies" 
                             inManagedObjectContext:context];
- 
-    movieDB.title =  @"Tadas Blinda";
-    movieDB.titleEn =  @"Blind Tod";
+ */
+ //   movieDB.title =  @"Laptopas Ma";
+  //  movieDB.title =  @"Mephis Biznis";
+
+  //  movieDB.title =  @"Poeter moter";
+  /*  movieDB.title =  @"Okelis Mekelis";
+
+    movieDB.titleEn =  @"Bqwqwqw....";
     movieDB.thumbImage =  @"god80x80.jpeg";
     movieDB.fullImage =  @"god80x80.jpeg";
     movieDB.director =  @"Pumpurinis Varnas";
     movieDB.createdYear =  @"2012";
     movieDB.duration =  @"2:05";
     movieDB.schedule = [NSSet setWithObject:scheduleRow] ;
-    
-  /*  
+    */
+  
     NSFetchRequest *fetchMovieRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityMovie = [NSEntityDescription 
                                    entityForName:@"Movies" inManagedObjectContext:context];
-       NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title==%@", @"Vyrai juodom BLiuskom"]; 
+       NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title=%@", @"Okelis Mekelis"]; 
     [fetchMovieRequest setPredicate:predicate];
     [fetchMovieRequest setEntity:entityMovie];
     
     NSArray *fetchedMovie = [context executeFetchRequest:fetchMovieRequest error:&error];
     
+    NSLog(@"%i",[fetchedMovie count ]);
     Movies *movieDB = [fetchedMovie objectAtIndex:0];
-    */
-    scheduleRow.city = @"Vilnius";
+    
+    /*
+    
+    scheduleRow.city = @"Kaunas";
     scheduleRow.date = date;
-    scheduleRow.cinema = @"Skalvija";
+    scheduleRow.cinema = @"Romuva";
     scheduleRow.favorite = [NSNumber numberWithInt:0];
     scheduleRow.movie = movieDB;
-    
-    if (![context save:&error]) {
+   */
+ /*   if (![context save:&error]) {
         NSLog(@"Couldn't save: %@", [error localizedDescription]);
     }
+    */
      [self disableDateNavigationButtons ];
     /*
     
@@ -228,9 +237,9 @@
 
 -(void)movieCell:(UITableViewCell *)cell favoriteButtonClicked:(UIButton *)button {
     SCMovieCell *movieCell = (SCMovieCell *)cell;
-    
+ //   NSLog(@"selected: %@", [NSNumber numberWithBool:button.selected]);
     NSDate * movieDate = [self combineDateWithTime: _dateString.getCurrentDate.date movieTime:movieCell.timeLabel.text];
-    NSLog(@"%@", movieCell.cinema);
+
     [self insertFavoriteToDatabase:movieDate byCity:[_config getCityName] byCinema:movieCell.cinema favoriteState:[NSNumber numberWithBool:!button.selected]];
    
     

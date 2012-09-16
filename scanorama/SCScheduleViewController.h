@@ -30,7 +30,6 @@ NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
 - (IBAction)previousDay:(id)sender;
 -(void) disableDateNavigationButtons;
 
--(void)customCell:(SCMovieCell *)cell favoriteButtonClicked:(id)button;
 
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 

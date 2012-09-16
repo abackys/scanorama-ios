@@ -10,14 +10,16 @@
 #import "Schedule.h"
 #import "Movies.h"
 #import "SCConfig.h"
+#import "SCMovieCell.h"
 
-@interface SCMyProgramViewController : UITableViewController <UITextFieldDelegate, NSFetchedResultsControllerDelegate>
+@interface SCMyProgramViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
 
 
 @property (strong, nonatomic) SCConfig * config;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSMutableArray *favoriteMovieArray; 
 
--(void) textFieldDidBeginEditing:(UITextField *)textField;
+
 
 @end
