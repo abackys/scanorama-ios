@@ -31,6 +31,7 @@
 @property (strong, nonatomic) NSString *cinema;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSString *city;
+
 -(IBAction)favoriteButtonClicked:(id)sender;
 
 

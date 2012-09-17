@@ -10,6 +10,7 @@
 		CE00F36B1600D6A30084C702 /* SCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00F36A1600D6A30084C702 /* SCDate.m */; };
 		CE6C2C62160103B80087CED3 /* SCDateNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C2C61160103B80087CED3 /* SCDateNavigator.m */; };
 		CE6C74B01600CD160070AF61 /* SCDateString.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C74AF1600CD160070AF61 /* SCDateString.m */; };
+		CE6C9295160764AB00E78965 /* SCMovieDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C9294160764AB00E78965 /* SCMovieDescriptionViewController.m */; };
 		CE6C937815F8E3F300B907CE /* SCLandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */; };
 		CE6C9F8315FF43C400BEE44A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6C9F8215FF43C400BEE44A /* CoreData.framework */; };
 		CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D31291601EC3E00511AF1 /* Schedule.m */; };
@@ -51,6 +52,8 @@
 		CE6C2C61160103B80087CED3 /* SCDateNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDateNavigator.m; sourceTree = "<group>"; };
 		CE6C74AE1600CD160070AF61 /* SCDateString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDateString.h; sourceTree = "<group>"; };
 		CE6C74AF1600CD160070AF61 /* SCDateString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDateString.m; sourceTree = "<group>"; };
+		CE6C9293160764AB00E78965 /* SCMovieDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieDescriptionViewController.h; sourceTree = "<group>"; };
+		CE6C9294160764AB00E78965 /* SCMovieDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieDescriptionViewController.m; sourceTree = "<group>"; };
 		CE6C937615F8E3F300B907CE /* SCLandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLandingPageViewController.h; sourceTree = "<group>"; };
 		CE6C937715F8E3F300B907CE /* SCLandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLandingPageViewController.m; sourceTree = "<group>"; };
 		CE6C9F8215FF43C400BEE44A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -250,6 +253,8 @@
 				CEB8107215FA482800956FF7 /* SCMyProgramViewController.m */,
 				CEB8107415FA485B00956FF7 /* SCMoviesViewController.h */,
 				CEB8107515FA485B00956FF7 /* SCMoviesViewController.m */,
+				CE6C9293160764AB00E78965 /* SCMovieDescriptionViewController.h */,
+				CE6C9294160764AB00E78965 /* SCMovieDescriptionViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */,
 				CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */,
 				CEBDF43B1605EEAB00571282 /* FavoriteButtonDelegate.m in Sources */,
+				CE6C9295160764AB00E78965 /* SCMovieDescriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

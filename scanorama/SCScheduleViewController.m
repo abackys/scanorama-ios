@@ -51,6 +51,7 @@
 {
 
   //  [self configureView];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFavoriteNotification:) name:@"changeFavoriteValue" object:nil];
     
      _dateString = [[SCDateString alloc] initWithPredefinedData];
@@ -66,8 +67,8 @@
     
     
     NSDateComponents *dateComp2 = [[NSDateComponents alloc ] init];
-    [dateComp2 setDay:9]; [dateComp2 setMonth:11]; [dateComp2 setYear:2012];
-    [dateComp2 setHour:12]; [dateComp2 setMinute:25];
+    [dateComp2 setDay:10]; [dateComp2 setMonth:11]; [dateComp2 setYear:2012];
+    [dateComp2 setHour:13]; [dateComp2 setMinute:35];
     
   
 
@@ -86,39 +87,41 @@
      NSError *error;  
     SCAppDelegate *app = [UIApplication sharedApplication].delegate;
     _managedObjectContext = app.managedObjectContext;
-
+/*
     NSManagedObjectContext *context = _managedObjectContext;
     
-    /*
+    
     Schedule *scheduleRow = [NSEntityDescription
                              insertNewObjectForEntityForName:@"Schedule" 
                              inManagedObjectContext:context];
-    */
+    
 
- /*  
-   Movies *movieDB = [NSEntityDescription
-                            insertNewObjectForEntityForName:@"Movies" 
-                            inManagedObjectContext:context];
+   
+   Movies *movieDB = [NSEntityDescription                           insertNewObjectForEntityForName:@"Movies"                             inManagedObjectContext:context];
  */
- //   movieDB.title =  @"Laptopas Ma";
-  //  movieDB.title =  @"Mephis Biznis";
+  //  movieDB.title =  @"Laptopas Ma";
+ //   movieDB.title =  @"Mephis Biznis";
 
   //  movieDB.title =  @"Poeter moter";
-  /*  movieDB.title =  @"Okelis Mekelis";
-
-    movieDB.titleEn =  @"Bqwqwqw....";
-    movieDB.thumbImage =  @"god80x80.jpeg";
+  //  movieDB.title =  @"Okelis Mekelis";
+    
+//    movieDB.title = @"Lojantis SUo";
+    /*
+ movieDB.title = @"Lojantis SUo";
+    movieDB.titleEn =  @"Kujokils 15";
+    movieDB.thumbImage =  @"mib80x80.jpeg";
     movieDB.fullImage =  @"god80x80.jpeg";
     movieDB.director =  @"Pumpurinis Varnas";
     movieDB.createdYear =  @"2012";
     movieDB.duration =  @"2:05";
+    movieDB.group = @"Pietieciai";
     movieDB.schedule = [NSSet setWithObject:scheduleRow] ;
-    */
-  
+   */
+ /*
     NSFetchRequest *fetchMovieRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityMovie = [NSEntityDescription 
                                    entityForName:@"Movies" inManagedObjectContext:context];
-       NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title=%@", @"Okelis Mekelis"]; 
+       NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title=%@", @"Laptopas Ma"]; 
     [fetchMovieRequest setPredicate:predicate];
     [fetchMovieRequest setEntity:entityMovie];
     
@@ -126,20 +129,21 @@
     
     NSLog(@"%i",[fetchedMovie count ]);
     Movies *movieDB = [fetchedMovie objectAtIndex:0];
-    
+    */
     /*
     
-    scheduleRow.city = @"Kaunas";
+    scheduleRow.city = @"Vilnius";
     scheduleRow.date = date;
-    scheduleRow.cinema = @"Romuva";
+    scheduleRow.cinema = @"Forum Cienma";
     scheduleRow.favorite = [NSNumber numberWithInt:0];
     scheduleRow.movie = movieDB;
-   */
- /*   if (![context save:&error]) {
+   
+    if (![context save:&error]) {
         NSLog(@"Couldn't save: %@", [error localizedDescription]);
     }
-    */
+    
      [self disableDateNavigationButtons ];
+    */
     /*
     
    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -189,6 +193,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.tabBarController.title = @"Repertuaras";
     [self configureView];
     
     [super viewWillAppear:animated];
@@ -230,7 +235,7 @@
 {
 
     // Return the number of rows in the section.
-    NSLog(@"COuntas: %i", _ScheduleArray.count);
+ 
     return _ScheduleArray.count;
 }
 
@@ -247,7 +252,7 @@
 }
 
 -(void) insertFavoriteToDatabase:(NSDate *)date byCity:(NSString *)city byCinema:(NSString *)cinema favoriteState:(NSNumber *)favorite{
-NSLog(@"Favorite: BUJAKAKAKAK");
+
     NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
@@ -262,7 +267,7 @@ NSLog(@"Favorite: BUJAKAKAKAK");
     
     
     Schedule *scheduleRow = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-    NSLog(@"Favorite: %@", scheduleRow.favorite);
+
     scheduleRow.favorite = favorite;
     
     error = nil;
@@ -280,7 +285,7 @@ NSLog(@"Favorite: BUJAKAKAKAK");
     
     NSNumber *favorite =  [[pNotification userInfo] valueForKey:@"favoriteButton"];
     [self insertFavoriteToDatabase:movieCell.date byCity:movieCell.city byCinema:movieCell.cinema favoriteState:favorite];
-    NSLog(@"%@", favorite);
+
    // NSLog(@"wwew %@", (NSString*) [pNotification object]);
 
 }
@@ -377,7 +382,6 @@ NSLog(@"Favorite: BUJAKAKAKAK");
      
     } 
    Schedule *schedule = [_ScheduleArray lastObject];
-    NSLog(@"%@",schedule.date);
     return [NSMutableArray arrayWithArray:fetchedObjects];
 }
 

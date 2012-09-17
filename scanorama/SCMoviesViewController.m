@@ -7,25 +7,32 @@
 //
 
 #import "SCMoviesViewController.h"
+#import "SCAppDelegate.h"
+#import "SCMovieCell.h"
+
+
 
 @interface SCMoviesViewController ()
+
+
 
 @end
 
 @implementation SCMoviesViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize config = _config;
+@synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize MoviesArray = _MoviesArray;
+
 
 - (void)viewDidLoad
 {
-     self.tabBarController.navigationItem.title = @"Filmai";
+    
+    
+
+    SCAppDelegate *app = [UIApplication sharedApplication].delegate;
+    _managedObjectContext = app.managedObjectContext;
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -35,11 +42,76 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+     
+    self.tabBarController.title = @"Filmai";
+    _MoviesArray = [self getAllMovies];
+    
+    NSLog(@"Atsirado Filmai");
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+ 
+
+//    [self.navigationItem setTitle:@"Filmai"];
+ //   self.navigationItem.backBarButtonItem.title = @"Atgal";
+}
+
 - (void)viewDidUnload
 {
+    NSMutableArray * _MoviesArray = [[NSMutableArray alloc] init];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+
+-(NSMutableArray *)getAllMovies {
+    
+    
+    NSError *error;
+    
+    NSManagedObjectContext *context = _managedObjectContext;
+        
+    NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"group" ascending:TRUE];            
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription 
+                                   entityForName:@"Movies" inManagedObjectContext:context];
+  //  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"favorite = 1", [_config getCityName]]; 
+    
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortByDate]];
+    [fetchRequest setEntity:entity];
+   // [fetchRequest setPredicate:predicate];
+    
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSLog(@"fetched Movies: %i",[fetchedObjects count ]);
+    return [self addMoviesToSectionsByGroups:fetchedObjects];
+   //return 
+    
+}
+
+-(NSMutableArray *) addMoviesToSectionsByGroups:(NSArray *)moviesArray{
+
+    NSMutableArray *sectionArray = [[NSMutableArray alloc] init ];
+    NSMutableArray * sectionedMovieArray = [[NSMutableArray alloc] init];
+    Movies *tempMovie = (Movies *) [moviesArray objectAtIndex:0];
+    
+    NSString *lastgroup = tempMovie.group;
+    NSString *currentGroup = tempMovie.group;
+   
+    for (Movies *movieRowData in moviesArray) {
+        currentGroup = movieRowData.group;
+        if(![lastgroup isEqualToString:currentGroup]){            
+            [sectionedMovieArray addObject: [sectionArray copy]];
+            [sectionArray removeAllObjects];
+        }
+        [sectionArray addObject:movieRowData];
+        lastgroup = movieRowData.group;        
+    }     
+    [sectionedMovieArray addObject:[sectionArray copy] ];
+    return sectionedMovieArray;
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -49,26 +121,51 @@
 
 #pragma mark - Table view data source
 
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    Movies * movieData =  [[_MoviesArray objectAtIndex:section ] firstObject ];
+  
+    
+    return movieData.group;
+    
+}
+
+
+#pragma mark - Table view data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+    
     // Return the number of sections.
-    return 0;
+    return _MoviesArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    
+    
+    NSArray *sectionData = (NSArray *) [_MoviesArray objectAtIndex:section ];
+    return sectionData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSDateFormatter * hours_minutes =  [[NSDateFormatter alloc ] init ];
+    [hours_minutes setDateFormat:@"HH:mm"];
     
-    // Configure the cell...
+    NSArray *sectionArray = [_MoviesArray objectAtIndex:indexPath.section];
+    Movies * movie = [sectionArray objectAtIndex:indexPath.row];
+    static NSString *CellIdentifier = @"MovieCell";
+    SCMovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+ //   cell.delegate = self;
+    cell.movieLabel.text = movie.title;
+    cell.movieEnLabel.text = movie.titleEn;
+   // cell.favoriteButton.selected = [movie.favorite boolValue];
+   // cell.timeLabel.text = [ hours_minutes  stringFromDate:schedule.date];
+    cell.thumbImage.image = [UIImage imageNamed:movie.thumbImage];
+   // cell.cinema = schedule.cinema;
+   // cell.city = schedule.city;
+   // cell.date = schedule.date;
     
     return cell;
 }

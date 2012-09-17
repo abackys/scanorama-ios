@@ -58,6 +58,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.tabBarController.title = @"Mano Programa";
+    
     _favoriteMovieArray = [[NSMutableArray alloc] init];   
     [self getFavoriteMoviesArray];
     [_myProgramTableView reloadData];
@@ -88,7 +90,7 @@
     NSError *error;
     
     NSManagedObjectContext *context = _managedObjectContext;
-    NSLog(@"%@",context);
+ 
     
     NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:TRUE];
     
@@ -105,7 +107,8 @@
     [fetchRequest setPredicate:predicate];
     
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    NSLog(@"fetched: %i",[fetchedObjects count ]);
+  //  NSLog(@"fetched: %i",[fetchedObjects count ]);
+    if([fetchedObjects count])
     [self addMoviesArrayToSectionsArrays:fetchedObjects];
     
     
@@ -116,7 +119,7 @@
 }
 
 -(void) addMoviesArrayToSectionsArrays:(NSArray *)moviesArray{
-    unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     int lastDateInt = 0;
     int currentDateInt = 0;
@@ -172,7 +175,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  NSLog(@"EWEWEWEWEWEWE: %i", _favoriteMovieArray.count);
+ 
     // Return the number of sections.
     return _favoriteMovieArray.count;
 }
@@ -182,14 +185,12 @@
 
     
     NSArray *sectionData = (NSArray *) [_favoriteMovieArray objectAtIndex:section ];
-      NSLog(@"NumberOFrow: %i at section: %i", sectionData.count, section);
-    return sectionData.count;
+     return sectionData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
- //   NSLog(@"%@", [indexPath ]);
-      NSLog(@"MyPqqqrogramView");
+
     NSDateFormatter * hours_minutes =  [[NSDateFormatter alloc ] init ];
     [hours_minutes setDateFormat:@"HH:mm"];
     

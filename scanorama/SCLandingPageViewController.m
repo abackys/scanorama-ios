@@ -24,8 +24,8 @@
 
 - (void)viewDidLoad
 {
-    
-    [[self navigationController] setTitle:@"Landing Page"];
+
+   // [[self navigationController] setTitle:@"Landing Page"];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * titleEn;
 @property (nonatomic, retain) NSString * duration;
 @property (nonatomic, retain) NSString * director;
+@property (nonatomic, retain) NSString * group;
 @property (nonatomic, retain) NSSet *schedule;
 @end
 

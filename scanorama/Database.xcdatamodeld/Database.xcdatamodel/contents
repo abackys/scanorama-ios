@@ -5,6 +5,7 @@
         <attribute name="director" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titleEn" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,7 +19,7 @@
         <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movies" inverseName="schedule" inverseEntity="Movies" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movies" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Movies" positionX="160" positionY="192" width="128" height="180"/>
         <element name="Schedule" positionX="-83" positionY="198" width="128" height="105"/>
     </elements>
 </model>
