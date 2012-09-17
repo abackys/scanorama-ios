@@ -9,6 +9,7 @@
 #import "SCMoviesViewController.h"
 #import "SCAppDelegate.h"
 #import "SCMovieCell.h"
+#import "SCMovieDescriptionViewController.h"
 
 
 
@@ -24,6 +25,7 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize MoviesArray = _MoviesArray;
+@synthesize tableView = _tableView;
 
 
 - (void)viewDidLoad
@@ -59,7 +61,7 @@
 
 - (void)viewDidUnload
 {
-    NSMutableArray * _MoviesArray = [[NSMutableArray alloc] init];
+   // NSMutableArray * _MoviesArray = [[NSMutableArray alloc] init];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -168,6 +170,15 @@
    // cell.date = schedule.date;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SCMovieDescriptionViewController *detailController = segue.destinationViewController;
+    NSArray *sectionData = [_MoviesArray objectAtIndex:self.tableView.indexPathForSelectedRow.section];
+    Movies *movieData = [sectionData objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    
+    detailController.movieData = movieData;
 }
 
 /*

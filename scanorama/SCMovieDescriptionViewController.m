@@ -8,13 +8,31 @@
 
 #import "SCMovieDescriptionViewController.h"
 
-@interface SCMovieDescriptionViewController ()
-
-@end
 
 @implementation SCMovieDescriptionViewController
 
+@synthesize movieData = _movieData;
+@synthesize textView = _textView;
+@synthesize scrollView = _scrollView;
+@synthesize bottomView = _bottomView;
+
 - (void)viewWillAppear:(BOOL)animated {
+    
+    
+    NSLog(@"%@", _movieData);
+    CGRect rect = _textView.frame;
+    CGRect bottomRect = _bottomView.frame;
+    
+    
+    rect.size = _textView.contentSize;
+    bottomRect.origin.y += rect.size.height - 100;
+    
+   // rect.origin.y = 50;
+   // CGPoint *point = CGPointMake(200, 200);
+  //  _bottomView.frame.origin = (_bottomView.frame.origin.y + 100);
+    _textView.frame = rect;
+    _bottomView.frame = bottomRect;
+    _scrollView.contentSize = CGSizeMake(320, 640 + rect.size.height - 100);
   //  self.navigationItem.backBarButtonItem.title = @"Atgalios";
     [[self navigationController] setNavigationBarHidden:NO animated:YES]; 
  
@@ -36,6 +54,9 @@
 
 - (void)viewDidUnload
 {
+    [self setTextView:nil];
+    [self setScrollView:nil];
+    [self setBottomView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -44,5 +65,11 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+-(void) configureView:(Movies *)movieData {
+    
+}
+
+    
+
 
 @end
