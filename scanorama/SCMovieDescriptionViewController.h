@@ -14,7 +14,11 @@
 @property (strong, nonatomic) Movies *movieData;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
 
- 		
+@property (weak, nonatomic) IBOutlet UITextView *movieDescriptionTextView;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UITextView *movieMetaTextView;
+
+	
 @end

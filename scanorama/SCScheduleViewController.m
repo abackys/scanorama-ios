@@ -67,8 +67,8 @@
     
     
     NSDateComponents *dateComp2 = [[NSDateComponents alloc ] init];
-    [dateComp2 setDay:10]; [dateComp2 setMonth:11]; [dateComp2 setYear:2012];
-    [dateComp2 setHour:13]; [dateComp2 setMinute:35];
+    [dateComp2 setDay:8]; [dateComp2 setMonth:11]; [dateComp2 setYear:2012];
+    [dateComp2 setHour:14]; [dateComp2 setMinute:35];
     
   
 
@@ -87,8 +87,8 @@
      NSError *error;  
     SCAppDelegate *app = [UIApplication sharedApplication].delegate;
     _managedObjectContext = app.managedObjectContext;
-/*
-    NSManagedObjectContext *context = _managedObjectContext;
+
+ /*   NSManagedObjectContext *context = _managedObjectContext;
     
     
     Schedule *scheduleRow = [NSEntityDescription
@@ -105,9 +105,9 @@
   //  movieDB.title =  @"Poeter moter";
   //  movieDB.title =  @"Okelis Mekelis";
     
-//    movieDB.title = @"Lojantis SUo";
-    /*
- movieDB.title = @"Lojantis SUo";
+   // movieDB.title = @"Lojantis SUo";
+   /* 
+ //movieDB.title = @"Lojantis SUo";
     movieDB.titleEn =  @"Kujokils 15";
     movieDB.thumbImage =  @"mib80x80.jpeg";
     movieDB.fullImage =  @"god80x80.jpeg";
@@ -130,15 +130,15 @@
     NSLog(@"%i",[fetchedMovie count ]);
     Movies *movieDB = [fetchedMovie objectAtIndex:0];
     */
-    /*
     
-    scheduleRow.city = @"Vilnius";
+   /*
+    scheduleRow.city = @"Kaunas";
     scheduleRow.date = date;
     scheduleRow.cinema = @"Forum Cienma";
     scheduleRow.favorite = [NSNumber numberWithInt:0];
     scheduleRow.movie = movieDB;
    
-    if (![context save:&error]) {
+   if (![context save:&error]) {
         NSLog(@"Couldn't save: %@", [error localizedDescription]);
     }
     
@@ -195,7 +195,7 @@
 {
     self.tabBarController.title = @"Repertuaras";
     [self configureView];
-    
+    [_scheduleTableView reloadData];
     [super viewWillAppear:animated];
     }
 

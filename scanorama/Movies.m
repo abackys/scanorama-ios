@@ -2,7 +2,7 @@
 //  Movies.m
 //  scanorama
 //
-//  Created by Lion User on 12/09/2012.
+//  Created by Lion User on 18/09/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,12 +13,23 @@
 @implementation Movies
 
 @dynamic createdYear;
+@dynamic director;
+@dynamic duration;
 @dynamic fullImage;
+@dynamic group;
 @dynamic thumbImage;
 @dynamic title;
 @dynamic titleEn;
-@dynamic duration;
-@dynamic director;
+@dynamic titleNative;
+@dynamic country;
+@dynamic screenplay;
+@dynamic cinematography;
+@dynamic editing;
+@dynamic music;
+@dynamic cast;
+@dynamic moviedescription;
+@dynamic directorDescription;
+@dynamic directorFilms;
 @dynamic schedule;
 
 @end

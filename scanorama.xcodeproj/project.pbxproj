@@ -15,7 +15,6 @@
 		CE6C9F8315FF43C400BEE44A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6C9F8215FF43C400BEE44A /* CoreData.framework */; };
 		CE6D312A1601EC3E00511AF1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D31291601EC3E00511AF1 /* Schedule.m */; };
 		CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D312E1601F24C00511AF1 /* SCConfig.m */; };
-		CE6DC5071600A3B700A171C2 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6DC5061600A3B700A171C2 /* Movies.m */; };
 		CE6E996815FE214400DBCA0D /* 46-movie.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996415FE214400DBCA0D /* 46-movie.png */; };
 		CE6E996915FE214400DBCA0D /* light_list.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996515FE214400DBCA0D /* light_list.png */; };
 		CE6E996E15FE260400DBCA0D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6E996D15FE260400DBCA0D /* star@2x.png */; };
@@ -34,6 +33,7 @@
 		CE71A53415F75CF400FE4DC3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53315F75CF400FE4DC3 /* first@2x.png */; };
 		CE71A53915F75CF400FE4DC3 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53815F75CF400FE4DC3 /* second.png */; };
 		CE71A53B15F75CF400FE4DC3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE71A53A15F75CF400FE4DC3 /* second@2x.png */; };
+		CEA851D11608CACD005CBF0D /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA851D01608CACD005CBF0D /* Movies.m */; };
 		CEB8106D15FA432400956FF7 /* SCScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8106C15FA432400956FF7 /* SCScheduleViewController.m */; };
 		CEB8107315FA482800956FF7 /* SCMyProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107215FA482800956FF7 /* SCMyProgramViewController.m */; };
 		CEB8107615FA485B00956FF7 /* SCMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8107515FA485B00956FF7 /* SCMoviesViewController.m */; };
@@ -61,8 +61,6 @@
 		CE6D31291601EC3E00511AF1 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		CE6D312D1601F24C00511AF1 /* SCConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCConfig.h; sourceTree = "<group>"; };
 		CE6D312E1601F24C00511AF1 /* SCConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCConfig.m; sourceTree = "<group>"; };
-		CE6DC5051600A3B700A171C2 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
-		CE6DC5061600A3B700A171C2 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		CE6E996415FE214400DBCA0D /* 46-movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "46-movie.png"; path = "assets/icons/tabbar/46-movie.png"; sourceTree = "<group>"; };
 		CE6E996515FE214400DBCA0D /* light_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_list.png; path = assets/icons/tabbar/light_list.png; sourceTree = "<group>"; };
 		CE6E996D15FE260400DBCA0D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "../../../../Dropbox/CrazyImp/scanorama/iOS/icons/tabbar/star@2x.png"; sourceTree = "<group>"; };
@@ -85,6 +83,8 @@
 		CE71A53315F75CF400FE4DC3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		CE71A53815F75CF400FE4DC3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		CE71A53A15F75CF400FE4DC3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		CEA851CF1608CACD005CBF0D /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
+		CEA851D01608CACD005CBF0D /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		CEB8106B15FA432400956FF7 /* SCScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCScheduleViewController.h; sourceTree = "<group>"; };
 		CEB8106C15FA432400956FF7 /* SCScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCScheduleViewController.m; sourceTree = "<group>"; };
 		CEB8107115FA482800956FF7 /* SCMyProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMyProgramViewController.h; sourceTree = "<group>"; };
@@ -120,11 +120,11 @@
 		CE6C9F4715FF3C2400BEE44A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CEA851CF1608CACD005CBF0D /* Movies.h */,
+				CEA851D01608CACD005CBF0D /* Movies.m */,
 				CEBA611C15FF56090047DA80 /* Database.xcdatamodeld */,
 				CE6D31281601EC3E00511AF1 /* Schedule.h */,
 				CE6D31291601EC3E00511AF1 /* Schedule.m */,
-				CE6DC5051600A3B700A171C2 /* Movies.h */,
-				CE6DC5061600A3B700A171C2 /* Movies.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -374,7 +374,6 @@
 				CEB8107915FA57C300956FF7 /* SCTabBarViewController.m in Sources */,
 				CEB8108115FA738900956FF7 /* SCMovieCell.m in Sources */,
 				CEBA611E15FF56090047DA80 /* Database.xcdatamodeld in Sources */,
-				CE6DC5071600A3B700A171C2 /* Movies.m in Sources */,
 				CE6C74B01600CD160070AF61 /* SCDateString.m in Sources */,
 				CE00F36B1600D6A30084C702 /* SCDate.m in Sources */,
 				CE6C2C62160103B80087CED3 /* SCDateNavigator.m in Sources */,
@@ -382,6 +381,7 @@
 				CE6D312F1601F24C00511AF1 /* SCConfig.m in Sources */,
 				CEBDF43B1605EEAB00571282 /* FavoriteButtonDelegate.m in Sources */,
 				CE6C9295160764AB00E78965 /* SCMovieDescriptionViewController.m in Sources */,
+				CEA851D11608CACD005CBF0D /* Movies.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

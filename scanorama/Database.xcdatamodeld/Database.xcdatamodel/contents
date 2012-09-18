@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Movies" representedClassName="Movies" syncable="YES">
+        <attribute name="cast" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cinematography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdYear" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="director" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="directorDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="directorFilms" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="editing" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moviedescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="music" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screenplay" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titleEn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titleNative" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="schedule" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Schedule" inverseName="movie" inverseEntity="Schedule" syncable="YES"/>
     </entity>
     <entity name="Schedule" representedClassName="Schedule" syncable="YES">
@@ -19,7 +29,7 @@
         <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movies" inverseName="schedule" inverseEntity="Movies" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movies" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="Movies" positionX="160" positionY="192" width="128" height="330"/>
         <element name="Schedule" positionX="-83" positionY="198" width="128" height="105"/>
     </elements>
 </model>

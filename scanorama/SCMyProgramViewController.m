@@ -63,7 +63,7 @@
     _favoriteMovieArray = [[NSMutableArray alloc] init];   
     [self getFavoriteMoviesArray];
     [_myProgramTableView reloadData];
-    NSLog(@"MyProgramView");
+   
     
     [super viewWillAppear:animated];
 }

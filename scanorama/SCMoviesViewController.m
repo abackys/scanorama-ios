@@ -88,7 +88,8 @@
     
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     NSLog(@"fetched Movies: %i",[fetchedObjects count ]);
-    return [self addMoviesToSectionsByGroups:fetchedObjects];
+    if([fetchedObjects count ])
+        return [self addMoviesToSectionsByGroups:fetchedObjects];
    //return 
     
 }
