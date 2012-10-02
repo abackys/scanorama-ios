@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSMutableArray *favoriteMovieArray; 
 @property (strong, nonatomic) SCScheduleViewController *scheduleView;
 @property (strong, nonatomic) IBOutlet UITableView *myProgramTableView;
+- (IBAction)shareMyProgramCliked:(id)sender;
 
 
 

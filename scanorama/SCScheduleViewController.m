@@ -16,6 +16,7 @@
 #import "SCDateString.h"
 #import "SCDateNavigator.h"
 #import "SCConfig.h"
+#import "SCMovieDescriptionViewController.h"
 
 
 
@@ -76,7 +77,7 @@
     NSDate * date = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] dateFromComponents:dateComp2];
 
     
-    
+    NSLog(@"%@", date);
    // Schedule *scheduleRow = [[Schedule alloc] init];
     
     _ScheduleArray = [[NSMutableArray alloc] init];
@@ -88,7 +89,7 @@
     SCAppDelegate *app = [UIApplication sharedApplication].delegate;
     _managedObjectContext = app.managedObjectContext;
 
- /*   NSManagedObjectContext *context = _managedObjectContext;
+    NSManagedObjectContext *context = _managedObjectContext;
     
     
     Schedule *scheduleRow = [NSEntityDescription
@@ -97,8 +98,8 @@
     
 
    
-   Movies *movieDB = [NSEntityDescription                           insertNewObjectForEntityForName:@"Movies"                             inManagedObjectContext:context];
- */
+ //  Movies *movieDB = [NSEntityDescription                           insertNewObjectForEntityForName:@"Movies"                             inManagedObjectContext:context];
+ 
   //  movieDB.title =  @"Laptopas Ma";
  //   movieDB.title =  @"Mephis Biznis";
 
@@ -117,11 +118,11 @@
     movieDB.group = @"Pietieciai";
     movieDB.schedule = [NSSet setWithObject:scheduleRow] ;
    */
- /*
+ 
     NSFetchRequest *fetchMovieRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityMovie = [NSEntityDescription 
                                    entityForName:@"Movies" inManagedObjectContext:context];
-       NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title=%@", @"Laptopas Ma"]; 
+       NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title=%@", @"Savaitgalis"]; 
     [fetchMovieRequest setPredicate:predicate];
     [fetchMovieRequest setEntity:entityMovie];
     
@@ -129,9 +130,9 @@
     
     NSLog(@"%i",[fetchedMovie count ]);
     Movies *movieDB = [fetchedMovie objectAtIndex:0];
-    */
     
-   /*
+  /*  
+   
     scheduleRow.city = @"Kaunas";
     scheduleRow.date = date;
     scheduleRow.cinema = @"Forum Cienma";
@@ -334,12 +335,27 @@
    
     cell.date = schedule.date;
     
+
+    
     //cell.favoriteButton.selected = [movieData.inFavorite boolValue];
     
     
     // Configure the cell...
     
     return cell;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if(![segue.identifier isEqualToString:@"toLandingPage"]){
+    SCMovieDescriptionViewController *detailController = segue.destinationViewController;
+    
+    Schedule *scheduleData = [_ScheduleArray objectAtIndex:self.scheduleTableView.indexPathForSelectedRow.row];
+
+    detailController.movieData = scheduleData.movie;
+    }
 }
 
 -(IBAction)toggleFavorite:(UIButton *)sender {

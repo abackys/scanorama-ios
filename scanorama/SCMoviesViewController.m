@@ -28,6 +28,7 @@
 @synthesize tableView = _tableView;
 
 
+
 - (void)viewDidLoad
 {
     
@@ -62,6 +63,7 @@
 - (void)viewDidUnload
 {
    // NSMutableArray * _MoviesArray = [[NSMutableArray alloc] init];
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -126,9 +128,13 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     Movies * movieData =  [[_MoviesArray objectAtIndex:section ] firstObject ];
-  
     
-    return movieData.group;
+    if(movieData.group)
+        return movieData.group;
+    else {
+        NSLog(@"%@", movieData);
+        return @"TTT";
+    }
     
 }
 
@@ -176,9 +182,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SCMovieDescriptionViewController *detailController = segue.destinationViewController;
+    NSLog(@"priesh");
     NSArray *sectionData = [_MoviesArray objectAtIndex:self.tableView.indexPathForSelectedRow.section];
     Movies *movieData = [sectionData objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    
+    NSLog(@"%@", self.tableView);
     detailController.movieData = movieData;
 }
 

@@ -9,6 +9,8 @@
 #import "SCLandingPageViewController.h"
 #import "SCScheduleViewController.h"
 #import "SCConfig.h"
+#import "SCJsonDatabase.h"
+
 
 @interface SCLandingPageViewController ()
 
@@ -24,6 +26,10 @@
 
 - (void)viewDidLoad
 {
+
+    SCJsonDatabase *jsonDb = [[SCJsonDatabase alloc] init];
+        [jsonDb insertMoviesJsonToDatabase];
+       [jsonDb insertScheduleJsonToDatabase];
 
    // [[self navigationController] setTitle:@"Landing Page"];
     [super viewDidLoad];

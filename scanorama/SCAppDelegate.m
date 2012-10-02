@@ -17,7 +17,7 @@
 @synthesize managedObjectContext=__managedObjectContext;
 @synthesize managedObjectModel=__managedObjectModel;
 @synthesize persistentStoreCoordinator=__persistentStoreCoordinator;
-
+@synthesize sessionFb = _sessionFb;
 
 - (void)saveContext
 {
@@ -120,6 +120,14 @@
     }    
     
     return __persistentStoreCoordinator;
+}
+
+- (BOOL)application:(UIApplication *)application 
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [self.sessionFb handleOpenURL:url]; 
 }
 
 #pragma mark - Application's Documents directory

@@ -13,12 +13,14 @@
         <attribute name="fullImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="moviedescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movieId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="music" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="screenplay" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thumbImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titleEn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titleNative" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="schedule" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Schedule" inverseName="movie" inverseEntity="Schedule" syncable="YES"/>
     </entity>
     <entity name="Schedule" representedClassName="Schedule" syncable="YES">
@@ -29,7 +31,7 @@
         <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movies" inverseName="schedule" inverseEntity="Movies" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movies" positionX="160" positionY="192" width="128" height="330"/>
-        <element name="Schedule" positionX="-83" positionY="198" width="128" height="105"/>
+        <element name="Movies" positionX="160" positionY="192" width="128" height="360"/>
+        <element name="Schedule" positionX="-117" positionY="201" width="128" height="105"/>
     </elements>
 </model>

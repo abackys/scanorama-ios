@@ -210,7 +210,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YBa-1d-OHQ"/>
                                     <barButtonItem title="Miestas" id="uX0-kj-FZ1">
                                         <connections>
-                                            <segue destination="kEC-vu-TqG" kind="push" id="lCp-dy-zbP"/>
+                                            <segue destination="kEC-vu-TqG" kind="push" identifier="toLandingPage" id="lCp-dy-zbP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -232,18 +232,18 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" id="rwo-0Z-cTf">
-                                                    <rect key="frame" x="80" y="3" width="176" height="60"/>
+                                                    <rect key="frame" x="80" y="3" width="200" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo pavadinimas LT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2AW-ZS-ImQ">
-                                                            <rect key="frame" x="0.0" y="5" width="340" height="20"/>
+                                                            <rect key="frame" x="0.0" y="5" width="195" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo Pavadinimas EN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BgB-0N-hy2">
-                                                            <rect key="frame" x="0.0" y="27" width="200" height="21"/>
+                                                            <rect key="frame" x="0.0" y="27" width="195" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -262,7 +262,7 @@
                                                     <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="CDi-O9-IXI">
-                                                    <rect key="frame" x="264" y="19" width="40" height="40"/>
+                                                    <rect key="frame" x="275" y="19" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -358,23 +358,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mib80x80.jpeg" id="vcT-TO-6WF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thelegentofkasparhauser_thumb.jpg" id="vcT-TO-6WF">
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" id="qDP-bS-TUy">
-                                                    <rect key="frame" x="80" y="0.0" width="176" height="60"/>
+                                                    <rect key="frame" x="80" y="0.0" width="200" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo pavadinimas LT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="XNq-9i-ANn">
-                                                            <rect key="frame" x="0.0" y="5" width="340" height="20"/>
+                                                            <rect key="frame" x="0.0" y="5" width="195" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo Pavadinimas EN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ei6-Un-P3i">
-                                                            <rect key="frame" x="0.0" y="27" width="200" height="21"/>
+                                                            <rect key="frame" x="0.0" y="27" width="195" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -393,7 +393,7 @@
                                                     <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="oxP-yW-gRO">
-                                                    <rect key="frame" x="264" y="20" width="40" height="40"/>
+                                                    <rect key="frame" x="275" y="20" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -453,7 +453,11 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sOo-12-Fnx"/>
-                                    <barButtonItem title="Dalintis" id="3Ar-f8-8Vz"/>
+                                    <barButtonItem title="Dalintis" id="3Ar-f8-8Vz">
+                                        <connections>
+                                            <action selector="shareMyProgramCliked:" destination="jbV-2p-G0V" id="ceK-23-Oje"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -486,7 +490,7 @@
                                         <rect key="frame" x="0.0" y="246" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, icing pecu, </mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, icing pecu, </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -517,7 +521,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="e0d-7a-sRq">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="e0d-7a-sRq">
                                         <rect key="frame" x="0.0" y="168" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -530,27 +534,62 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="EBa-Cg-1VM">
+                                        <rect key="frame" x="233" y="164" width="29" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="6N4-tk-Xiu" kind="push" identifier="showDirector" id="fea-Li-DsQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Aprašymas" id="n8s-jV-0E9">
-                        <barButtonItem key="rightBarButtonItem" title="Dalintis" id="sgZ-uj-Ulx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Dalintis" id="sgZ-uj-Ulx">
+                            <connections>
+                                <action selector="shareMovieButtonClicked:" destination="dRJ-Vi-Dtz" id="PfI-5i-CfI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bottomView" destination="oCX-E9-luG" id="16J-gz-dWc"/>
+                        <outlet property="headerImage" destination="OHb-OU-5Vb" id="Qyn-gX-761"/>
                         <outlet property="movieDescriptionTextView" destination="qrv-MI-ite" id="Bzy-S9-F1d"/>
                         <outlet property="movieMetaTextView" destination="e0d-7a-sRq" id="HKY-c1-tlz"/>
+                        <outlet property="scheduleTextView" destination="roH-8g-iDj" id="kVR-tR-GoT"/>
                         <outlet property="scrollView" destination="43y-X7-rWX" id="1CV-ND-Oo8"/>
-                        <outlet property="textView" destination="roH-8g-iDj" id="cRB-yf-Dwt"/>
                         <outlet property="webView" destination="sRI-yc-3Rn" id="aJC-7H-Ppi"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1154" y="962"/>
+        </scene>
+        <!--Director View Controller-->
+        <scene sceneID="thz-E4-RTG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3Q-aK-9aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="6N4-tk-Xiu" customClass="SCDirectorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7pL-bt-KaH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="827"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FpZ-YB-vhy"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1780" y="963"/>
         </scene>
         <!--Movies View Controller - Filmai-->
         <scene sceneID="frA-ie-3e8">
@@ -576,25 +615,25 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mib80x80.jpeg" id="rKY-jo-kP2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thelegentofkasparhauser_thumb.jpg" id="rKY-jo-kP2">
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" id="HNa-HE-eJm">
-                                                    <rect key="frame" x="80" y="3" width="176" height="60"/>
+                                                    <rect key="frame" x="80" y="3" width="200" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo pavadinimas LT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="f6Q-mU-ZJh">
-                                                            <rect key="frame" x="0.0" y="5" width="340" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo pavadinimas LT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="f6Q-mU-ZJh">
+                                                            <rect key="frame" x="0.0" y="5" width="195" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo Pavadinimas EN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="RdL-mZ-8we">
-                                                            <rect key="frame" x="0.0" y="27" width="200" height="21"/>
+                                                            <rect key="frame" x="0.0" y="28" width="195" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -602,7 +641,7 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="4a0-gj-Zf4">
-                                                    <rect key="frame" x="264" y="20" width="40" height="40"/>
+                                                    <rect key="frame" x="275" y="20" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -669,6 +708,9 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
                     <tabBarItem key="tabBarItem" title="Filmai" image="46-movie.png" id="oTv-zu-CzC"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="EE0-yw-vwq" id="BE4-aF-JcA"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1353" y="340"/>
@@ -681,10 +723,85 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
         <image name="first.png" width="30" height="30"/>
         <image name="god80x80.jpeg" width="80" height="80"/>
         <image name="light_list.png" width="22" height="20"/>
-        <image name="mib80x80.jpeg" width="80" height="80"/>
         <image name="second@2x.png" width="60" height="60"/>
         <image name="star.png" width="30" height="30"/>
+        <image name="thelegentofkasparhauser_thumb.jpg" width="650" height="300"/>
     </resources>
+    <classes>
+        <class className="SCDateNavigator" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCDateNavigator.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabelEn" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="previousButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCDirectorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCDirectorViewController.h"/>
+        </class>
+        <class className="SCLandingPageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCLandingPageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="landingButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="kaunasButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="klaipedaButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="siauliaiButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="vilniusButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCMovieCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMovieCell.h"/>
+            <relationships>
+                <relationship kind="action" name="favoriteButtonClicked:"/>
+                <relationship kind="outlet" name="favoriteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="movieEnLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="movieLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thumbImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SCMovieDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMovieDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareMovieButtonClicked:"/>
+                <relationship kind="outlet" name="bottomView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="headerImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="movieDescriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="movieMetaTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="scheduleTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SCMoviesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMoviesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SCMyProgramViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMyProgramViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareMyProgram:"/>
+                <relationship kind="outlet" name="myProgramTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SCScheduleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCScheduleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextDay:"/>
+                <relationship kind="action" name="previousDay:"/>
+                <relationship kind="action" name="toggleFavorite:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cityToolbarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="dateNavigatorView" candidateClass="SCDateNavigator"/>
+                <relationship kind="outlet" name="scheduleTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SCTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCTabBarViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

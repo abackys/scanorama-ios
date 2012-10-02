@@ -9,6 +9,7 @@
 #import "SCMyProgramViewController.h"
 #import "SCAppDelegate.h"
 #import "SCDateString.h"
+#import "SCMovieDescriptionViewController.h"
 
 @interface SCMyProgramViewController ()
 
@@ -266,6 +267,15 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SCMovieDescriptionViewController *detailController = segue.destinationViewController;
+    
+    NSArray *sectionData = [_favoriteMovieArray objectAtIndex:self.myProgramTableView.indexPathForSelectedRow.section];
+    Schedule *scheduleData = [sectionData objectAtIndex:self.myProgramTableView.indexPathForSelectedRow.row];
+    detailController.movieData = scheduleData.movie;
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -279,4 +289,6 @@
      */
 }
 
+- (IBAction)shareMyProgramCliked:(id)sender {
+}
 @end
