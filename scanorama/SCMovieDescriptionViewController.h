@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *scheduleTextView;
 - (void)shareMovie;
 - (IBAction)shareMovieButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareMovieButton;
 	
 @end

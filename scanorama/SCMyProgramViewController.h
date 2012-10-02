@@ -12,6 +12,7 @@
 #import "SCConfig.h"
 #import "SCMovieCell.h"
 #import "SCScheduleViewController.h"
+#import "SCErrors.h"
 
 
 @interface SCMyProgramViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
@@ -25,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *myProgramTableView;
 - (IBAction)shareMyProgramCliked:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareProgramButton;
 
 
 

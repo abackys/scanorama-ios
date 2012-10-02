@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE00F36B1600D6A30084C702 /* SCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00F36A1600D6A30084C702 /* SCDate.m */; };
+		CE683449161B48B300F8F0E7 /* SCErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = CE683448161B48B300F8F0E7 /* SCErrors.m */; };
 		CE69AE21161A167A00C07A37 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE69AE20161A167A00C07A37 /* FacebookSDK.framework */; };
 		CE69AE24161A168D00C07A37 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE69AE23161A168D00C07A37 /* FacebookSDKResources.bundle */; };
 		CE69AE26161A169C00C07A37 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE69AE25161A169C00C07A37 /* Accounts.framework */; };
@@ -80,6 +81,8 @@
 /* Begin PBXFileReference section */
 		CE00F3691600D6A30084C702 /* SCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDate.h; sourceTree = "<group>"; };
 		CE00F36A1600D6A30084C702 /* SCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDate.m; sourceTree = "<group>"; };
+		CE683447161B48B300F8F0E7 /* SCErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCErrors.h; path = ../SCErrors.h; sourceTree = "<group>"; };
+		CE683448161B48B300F8F0E7 /* SCErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCErrors.m; path = ../SCErrors.m; sourceTree = "<group>"; };
 		CE69AE20161A167A00C07A37 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		CE69AE23161A168D00C07A37 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		CE69AE25161A169C00C07A37 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -294,6 +297,8 @@
 		CE71A51F15F75CF300FE4DC3 /* scanorama */ = {
 			isa = PBXGroup;
 			children = (
+				CE683447161B48B300F8F0E7 /* SCErrors.h */,
+				CE683448161B48B300F8F0E7 /* SCErrors.m */,
 				CE6D312C1601F22C00511AF1 /* Utility */,
 				CE6C9F8215FF43C400BEE44A /* CoreData.framework */,
 				CE6C9F4715FF3C2400BEE44A /* CoreData */,
@@ -514,6 +519,7 @@
 				CEC3166B160B50AD001DD984 /* SCJsonDatabase.m in Sources */,
 				CE6C40821619B2DC005FB90E /* Movies.m in Sources */,
 				CE6C40C51619C198005FB90E /* SCDirectorViewController.m in Sources */,
+				CE683449161B48B300F8F0E7 /* SCErrors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

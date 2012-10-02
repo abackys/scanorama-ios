@@ -16,6 +16,7 @@
 @end
 
 @implementation SCMyProgramViewController
+@synthesize shareProgramButton = _shareProgramButton;
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize config = _config;
@@ -46,6 +47,7 @@
     _scheduleView = [[SCScheduleViewController alloc] init];
     
  
+    [self setShareProgramButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -62,7 +64,9 @@
     self.tabBarController.title = @"Mano Programa";
     
     _favoriteMovieArray = [[NSMutableArray alloc] init];   
-    [self getFavoriteMoviesArray];
+    NSArray *fetchedFavoriteArray = [self getFavoriteMoviesArray];
+    if([fetchedFavoriteArray count])
+        [self addMoviesArrayToSectionsArrays:fetchedFavoriteArray];
     [_myProgramTableView reloadData];
    
     
@@ -85,18 +89,13 @@
 }
 
 
--(void) getFavoriteMoviesArray{
+-(NSArray *) getFavoriteMoviesArray{
     
     
     NSError *error;
     
     NSManagedObjectContext *context = _managedObjectContext;
- 
-    
     NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:TRUE];
-    
-    
-    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
     NSEntityDescription *entity = [NSEntityDescription 
@@ -110,6 +109,10 @@
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
   //  NSLog(@"fetched: %i",[fetchedObjects count ]);
     if([fetchedObjects count])
+        return fetchedObjects;
+    else {
+        return nil;
+    }
     [self addMoviesArrayToSectionsArrays:fetchedObjects];
     
     
@@ -176,7 +179,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
- 
+    if(_favoriteMovieArray.count)
+        _shareProgramButton.enabled = TRUE;
+    else {
+        _shareProgramButton.enabled = FALSE;
+    }
+    
     // Return the number of sections.
     return _favoriteMovieArray.count;
 }
@@ -289,6 +297,51 @@
      */
 }
 
+
+-(void) shareMyProgram{
+    NSString *message = @"Filmus kuriuos noriu pamatyti per Europos šalių kino forumą - Scanorama:\n";
+    NSArray *fetchedFavoriteArray = [self getFavoriteMoviesArray];
+    for (Schedule *scheduleData in fetchedFavoriteArray) {
+        message = [message stringByAppendingFormat:@"%@ (%@)\n", scheduleData.movie.title, scheduleData.movie.titleNative];
+        
+        NSLog(@"%@", scheduleData.movie.title);
+    }
+   
+    NSLog(@"%@", message);
+    _shareProgramButton.enabled = FALSE;
+    [FBRequestConnection startForPostStatusUpdate:message
+                                completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                                    
+                                    SCErrors *errorAlert = [[SCErrors alloc] init];
+                                    [errorAlert showAlert:@"Jūs pasidalinote repertuaru su draugais" result:result error:error];
+                                }];
+    
+}
+
+
 - (IBAction)shareMyProgramCliked:(id)sender {
+    
+    
+    SCAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSLog(@"qqqq%@", [NSNumber numberWithBool:appDelegate.sessionFb.isOpen]);
+    if(!appDelegate.sessionFb.isOpen){
+
+        NSLog(@"Viduj");
+        
+        appDelegate.sessionFb = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObject:@"status_update"]];
+        //   NSLog(@"viduj vidujss");
+        
+        [appDelegate.sessionFb  openWithCompletionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+            [FBSession setActiveSession:appDelegate.sessionFb];
+            NSLog(@"Open WIth CompletionnHeader%@", [session accessToken]);
+            [self shareMyProgram];
+        } ];
+        
+    }
+    else {
+        [self shareMyProgram];
+    }
+    
+    
 }
 @end

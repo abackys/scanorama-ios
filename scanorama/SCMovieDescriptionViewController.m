@@ -9,9 +9,11 @@
 #import "SCMovieDescriptionViewController.h"
 #import "SCDirectorViewController.h"
 #import "SCAppDelegate.h"
+#import "SCErrors.h"
 
 
 @implementation SCMovieDescriptionViewController
+@synthesize shareMovieButton = _shareMovieButton;
 
 @synthesize movieData = _movieData;
 
@@ -27,7 +29,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     UIImage *promoImg = [UIImage imageNamed:_movieData.fullImage];
-    
+    _shareMovieButton.enabled = TRUE;
     CGRect rect = _scheduleTextView.frame;
     CGRect descriptionRect = _movieDescriptionTextView.frame;
     CGRect bottomRect = _bottomView.frame;
@@ -174,6 +176,7 @@
     [self setMovieMetaTextView:nil];
     [self setHeaderImage:nil];
     [self setScheduleTextView:nil];
+    [self setShareMovieButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -194,12 +197,15 @@
     
     NSString *message = [NSString stringWithFormat:@"Scanorama Europos šalių kino forumas\n %@(%@)\n %@\n", _movieData.title, _movieData.titleNative, _movieData.moviedescription];
     NSLog(@"%@", message);
-    
+    _shareMovieButton.enabled = FALSE;
     [FBRequestConnection startForPostStatusUpdate:message
                                 completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                                    
+                                    SCErrors *showError  = [[SCErrors alloc] init];
+                                    [showError showAlert:[NSString stringWithFormat:@"Jūs pasidalinote \"%@\" su savo draugais", _movieData.title ] result:result error:error];
+                                    
                                     NSLog(@"%@", error);
-                                }];
-    
+                                }];    
 }
 
 - (IBAction)shareMovieButtonClicked:(id)sender {
@@ -209,11 +215,7 @@
     if(!appDelegate.sessionFb.isOpen){
         
          NSLog(@"Viduj");
-      //  NSLog(@"%@", [[FBSession activeSession] accessToken]);
-     //   appDelegate.sessionFb = [[FBSession alloc] init];
-        
-    //    if([FBSession activeSession].state != FBSessionStateCreated){
-            
+      
      appDelegate.sessionFb = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObject:@"status_update"]];
      //   NSLog(@"viduj vidujss");
         
@@ -222,10 +224,7 @@
             NSLog(@"Open WIth CompletionnHeader%@", [session accessToken]);
             [self shareMovie];
         } ];
-    //   }
-    //    else {            [self shareMovie];        }
-     //   [FBSession setActiveSession:appDelegate.sessionFb];
-      //  
+
     }
     else {
         [self shareMovie];

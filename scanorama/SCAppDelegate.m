@@ -130,6 +130,8 @@
     return [self.sessionFb handleOpenURL:url]; 
 }
 
+
+
 #pragma mark - Application's Documents directory
 
 /**
@@ -139,8 +141,6 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
-
-
 
 
 
