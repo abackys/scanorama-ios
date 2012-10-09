@@ -28,6 +28,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareProgramButton;
 
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbarOutlet;
 
 
 @end

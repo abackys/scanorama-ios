@@ -90,8 +90,12 @@
     
     _scrollView.contentSize = CGSizeMake(320, 160 + 400 + 200 + 5*50 + strech);
 
-    [[self navigationController] setNavigationBarHidden:NO animated:YES]; 
-    [ self navigationController].navigationBar.barStyle = UIBarStyleBlack;
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+     [[ self navigationController].navigationBar setBackgroundImage:[UIImage imageNamed:@"toolbar_320x88.png"] forBarMetrics:UIBarMetricsDefault];
+    
+            
+   // [ self navigationController].navigationBar.barStyle = UIBarStyleBlack;
 
     [self addWebViewToBottom:@"http://www.youtube.com/embed/oHg5SJYRHA0" ];
     
@@ -101,7 +105,7 @@
     _headerImage.frame = promoImgRect;
     _headerImage.image = promoImg ;
     
-   _scheduleTextView.hidden = TRUE;
+//   _scheduleTextView.hidden = TRUE;
     
 }
 

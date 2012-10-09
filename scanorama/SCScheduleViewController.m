@@ -19,6 +19,23 @@
 #import "SCMovieDescriptionViewController.h"
 
 
+@implementation UIToolbar (CustomImage)
+
+
+- (void)drawRect:(CGRect)rect {
+    UIImage *image = [UIImage imageNamed:@"filmai_header_640x74.png"];
+    [image drawInRect:CGRectMake(0,0,self.frame.size.width, self.frame.size.height)];
+    
+    /*
+     UIColor *color = [UIColor blueColor];
+     //  self.tintColor = color;
+     CGContextRef context = UIGraphicsGetCurrentContext();
+     CGContextSetFillColor(context, CGColorGetComponents( [color CGColor]));
+     CGContextFillRect(context, rect);
+     */
+}  
+
+@end
 
 @interface SCScheduleViewController ()
 
@@ -26,8 +43,10 @@
 
 @implementation SCScheduleViewController
 @synthesize managedObjectContext = _managedObjectContext;
+@synthesize toolbarOutlet = _toolbarOutlet;
 @synthesize dateNavigatorView = _dateNavigatorView;
 @synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize tabBar = _tabBar;
 @synthesize scheduleTableView = _scheduleTableView;
 @synthesize ScheduleArray = _ScheduleArray;
 @synthesize cityToolbarButton = _cityToolbarButton;
@@ -39,18 +58,33 @@
 
 
 -(void) configureView {
-    
-    _config = [SCConfig sharedInstance];
 
-    _cityToolbarButton.title = [_config getCityName];
+  //   UIColor *color = [UIColor colorWithRed:30/255.0 green:30/255.0 blue:30/255.0 alpha:1.0];
+    // _toolbarOutlet set
+  //  [_toolbarOutlet setBackgroundColor:color];
+   // [_toolbarOutlet setBackgroundImage:[UIImage imageNamed:@"repertuaras_header_640x74.png"] forToolbarPosition: UIToolbarPositionAny barMetrics: UIBarMetricsDefault];
+    _config = [SCConfig sharedInstance];
+    [self.scheduleTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        _ScheduleArray  = [self getMoviesByDateAndCity:[_dateString getCurrentDate].date endDate:[_dateString getNextDay].date];
     
-    _ScheduleArray  = [self getMoviesByDateAndCity:[_dateString getCurrentDate].date endDate:[_dateString getNextDay].date];
+    [_dateNavigatorView.dateLabel setText:[_dateString getCurrentDate].dateStringLt];
+    [_dateNavigatorView.dateLabelEn setText:[_dateString getCurrentDate].dateStringEn];   
+    [self disableDateNavigationButtons];
+    
+    _cityToolbarButton.title = [_config getCityName];
+ 
+    
+
+ 
     
 }
 
 - (void)viewDidLoad
 {
 
+  //  [_toolbarOutlet setBackgroundImage:[UIImage imageNamed:@"toolbar_320x88.png"]  forToolbarPosition: UIToolbarPositionAny barMetrics: UIBarMetricsDefault];
+    
+    
   //  [self configureView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFavoriteNotification:) name:@"changeFavoriteValue" object:nil];
@@ -187,6 +221,8 @@
 
    
 
+    [self setToolbarOutlet:nil];
+    [self setTabBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -327,6 +363,8 @@
     Schedule *schedule = [_ScheduleArray objectAtIndex:indexPath.row];
     cell.movieLabel.text = schedule.movie.title;
     cell.movieEnLabel.text = schedule.movie.titleEn;
+    cell.directorLenghLabel.text = [schedule.movie.director stringByAppendingFormat:@", %@ min.", schedule.movie.duration];
+        cell.yearsCountryLabel.text = [schedule.movie.createdYear stringByAppendingFormat:@" m. %@", schedule.movie.country];
     cell.favoriteButton.selected = [schedule.favorite boolValue];
     cell.timeLabel.text = [ hours_minutes  stringFromDate:schedule.date];
     cell.thumbImage.image = [UIImage imageNamed:schedule.movie.thumbImage];

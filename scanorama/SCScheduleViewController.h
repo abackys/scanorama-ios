@@ -25,12 +25,14 @@ NSFetchedResultsControllerDelegate, FavoriteButtonDelegate>
 @property (strong, nonatomic) SCConfig * config;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbarOutlet;
 
 - (IBAction)nextDay:(id)sender;
 - (IBAction)previousDay:(id)sender;
 -(void) disableDateNavigationButtons;
 -(NSDate *) combineDateWithTime:(NSDate *)selectedDate movieTime:(NSString *)movieTime;
 -(void) insertFavoriteToDatabase:(NSDate *)date byCity:(NSString *)city byCinema:(NSString *)cinema favoriteState:(NSNumber *)favorite;
+@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 

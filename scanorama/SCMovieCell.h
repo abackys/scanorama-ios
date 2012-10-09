@@ -26,8 +26,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *movieLabel;
 @property (weak, nonatomic) IBOutlet UILabel *movieEnLabel;
+@property (weak, nonatomic) IBOutlet UILabel *directorLenghLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearsCountryLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImage;
+
+
 @property (strong, nonatomic) NSString *cinema;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSString *city;

@@ -17,6 +17,7 @@
 
 @implementation SCMyProgramViewController
 @synthesize shareProgramButton = _shareProgramButton;
+@synthesize toolbarOutlet = _toolbarOutlet;
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize config = _config;
@@ -25,12 +26,16 @@
 @synthesize scheduleView = _scheduleView;
 @synthesize myProgramTableView = _myProgramTableView;
 
+-(void) configureView {
+    self.tabBarController.title = @"Mano Programa";
 
+    
+}
 
 
 - (void)viewDidLoad
 {
-    
+   // self.tabBarController.title = @"Mano Programa";
     SCAppDelegate *app = [UIApplication sharedApplication].delegate;
     _managedObjectContext = app.managedObjectContext;
     [super viewDidLoad];
@@ -48,6 +53,7 @@
     
  
     [self setShareProgramButton:nil];
+    [self setToolbarOutlet:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -61,7 +67,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.tabBarController.title = @"Mano Programa";
+    
+    [self configureView];
     
     _favoriteMovieArray = [[NSMutableArray alloc] init];   
     NSArray *fetchedFavoriteArray = [self getFavoriteMoviesArray];

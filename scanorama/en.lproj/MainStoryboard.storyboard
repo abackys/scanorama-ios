@@ -17,6 +17,8 @@
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.60392156862745094" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="e7Q-F4-u5q" kind="relationship" relationship="viewControllers" id="IaO-VR-0ds"/>
@@ -123,33 +125,33 @@
                     <view key="view" contentMode="scaleToFill" id="gkM-z0-sRe">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <userGuides>
-                            <userLayoutGuide location="71" affinity="minY"/>
+                            <userLayoutGuide location="96" affinity="minY"/>
                         </userGuides>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="hxA-AS-Ijk" customClass="SCDateNavigator">
-                                <rect key="frame" x="0.0" y="44" width="320" height="54"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="LAPKRICIO 8 KETVIRTADIENIS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vXR-gY-rg4">
-                                        <rect key="frame" x="0.0" y="0.0" width="222" height="34"/>
+                                        <rect key="frame" x="20" y="0.0" width="222" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="NOVEMBER 8th, THURSDAY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zvy-Ws-V6q">
-                                        <rect key="frame" x="0.0" y="29" width="200" height="25"/>
+                                        <rect key="frame" x="20" y="20" width="200" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="iym-aY-Vn8">
-                                        <rect key="frame" x="284" y="11" width="29" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iym-aY-Vn8">
+                                        <rect key="frame" x="284" y="9" width="27" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal">
+                                        <state key="normal" image="time_next_33x47.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -160,11 +162,11 @@
                                             <action selector="nextDay:" destination="e7Q-F4-u5q" eventType="touchUpInside" id="PvM-9h-bTL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="Xcg-fC-3ef">
-                                        <rect key="frame" x="241" y="11" width="29" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xcg-fC-3ef">
+                                        <rect key="frame" x="242" y="9" width="27" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal">
+                                        <state key="normal" backgroundImage="time_prev_33x47.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -175,6 +177,10 @@
                                             <action selector="previousDay:" destination="e7Q-F4-u5q" eventType="touchUpInside" id="OC2-Vg-Df9"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="List_sep_640x7.png" id="H5D-fe-Kft">
+                                        <rect key="frame" x="-5" y="47" width="330" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -184,12 +190,14 @@
                                     <outlet property="previousButton" destination="Xcg-fC-3ef" id="5VM-eA-cgj"/>
                                 </connections>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="EXz-f8-YE4">
+                            <toolbar autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" barStyle="blackOpaque" id="EXz-f8-YE4" customClass="SCCustomToolbar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Ayn-3e-Xga"/>
+                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="Ayn-3e-Xga">
+                                        <color key="tintColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem title="Item" style="plain" id="KFn-eW-2Hq">
                                         <view key="customView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kK5-vV-IV8">
                                             <rect key="frame" x="32" y="2" width="180" height="40"/>
@@ -198,6 +206,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Repertuaras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0aY-lv-ga0">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -216,7 +225,7 @@
                                 </items>
                             </toolbar>
                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="zLS-YZ-LIS">
-                                <rect key="frame" x="0.0" y="106" width="320" height="305"/>
+                                <rect key="frame" x="0.0" y="96" width="320" height="315"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -228,50 +237,65 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="god80x80.jpeg" id="GP0-3V-y6G">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="8" y="6" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" id="rwo-0Z-cTf">
-                                                    <rect key="frame" x="80" y="3" width="200" height="60"/>
+                                                    <rect key="frame" x="80" y="6" width="200" height="65"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo pavadinimas LT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="2AW-ZS-ImQ">
-                                                            <rect key="frame" x="0.0" y="5" width="195" height="20"/>
+                                                            <rect key="frame" x="0.0" y="-2" width="195" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Filmo Pavadinimas EN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="BgB-0N-hy2">
-                                                            <rect key="frame" x="0.0" y="27" width="195" height="21"/>
+                                                            <rect key="frame" x="0.0" y="20" width="195" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bombuo Murowow, 140min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ivH-Mm-IXu">
+                                                            <rect key="frame" x="0.0" y="34" width="195" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2012 m. Lenkija/Cekija/Ispanija" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="sGI-L8-L5E">
+                                                            <rect key="frame" x="0.0" y="48" width="195" height="19"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="20:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Xd9-bK-g3P">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="20:15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Xd9-bK-g3P">
+                                                    <rect key="frame" x="32" y="58" width="40" height="11"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                    <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="CDi-O9-IXI">
-                                                    <rect key="frame" x="275" y="19" width="40" height="40"/>
+                                                    <rect key="frame" x="275" y="24" width="29" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <state key="normal" image="Star-empty-256.png">
+                                                    <state key="normal" image="star_not_selected_51x49.png">
                                                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <state key="selected" image="Star-256.png"/>
-                                                    <state key="highlighted">
+                                                    <state key="selected" image="star_selected_51x49.png"/>
+                                                    <state key="highlighted" image="star_selected_51x49.png">
                                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -280,15 +304,21 @@
                                                         <action selector="toggleFavorite:" destination="e7Q-F4-u5q" eventType="touchUpInside" id="CvP-58-1k3"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="List_sep_640x7.png" id="r7g-cq-Y04">
+                                                    <rect key="frame" x="-5" y="75" width="334" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="directorLenghLabel" destination="ivH-Mm-IXu" id="wpG-fr-Gzw"/>
                                             <outlet property="favoriteButton" destination="CDi-O9-IXI" id="aZj-hx-M3y"/>
                                             <outlet property="movieEnLabel" destination="BgB-0N-hy2" id="tN2-oW-aGT"/>
                                             <outlet property="movieLabel" destination="2AW-ZS-ImQ" id="Cdh-Yn-3jI"/>
                                             <outlet property="thumbImage" destination="GP0-3V-y6G" id="yzG-7R-yM3"/>
                                             <outlet property="timeLabel" destination="Xd9-bK-g3P" id="yLw-Oj-8Q6"/>
+                                            <outlet property="yearsCountryLabel" destination="sGI-L8-L5E" id="Vwl-AA-pPp"/>
                                             <segue destination="dRJ-Vi-Dtz" kind="push" id="aSN-S9-9AW"/>
                                         </connections>
                                     </tableViewCell>
@@ -301,11 +331,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Repertuaras" image="light_list.png" id="Zje-Wx-5Py"/>
+                    <tabBarItem key="tabBarItem" title="Repertuaras" image="list_empty.png" id="Zje-Wx-5Py"/>
                     <connections>
                         <outlet property="cityToolbarButton" destination="uX0-kj-FZ1" id="VUS-rz-M4h"/>
                         <outlet property="dateNavigatorView" destination="hxA-AS-Ijk" id="rsh-wZ-X97"/>
                         <outlet property="scheduleTableView" destination="zLS-YZ-LIS" id="kE7-dP-644"/>
+                        <outlet property="toolbarOutlet" destination="EXz-f8-YE4" id="bmA-RD-Cru"/>
                     </connections>
                 </viewController>
             </objects>
@@ -429,7 +460,7 @@
                                     <outlet property="delegate" destination="jbV-2p-G0V" id="TUX-uT-u7x"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="sSM-2S-hSf">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="sSM-2S-hSf" customClass="SCCustomToolbar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -463,12 +494,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mano Programa" image="star.png" id="1Qf-ZO-df9"/>
+                    <tabBarItem key="tabBarItem" title="Mano Programa" image="star_empty.png" id="1Qf-ZO-df9"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myProgramTableView" destination="yXU-8h-Bh0" id="AYe-n6-TQa"/>
                         <outlet property="shareProgramButton" destination="3Ar-f8-8Vz" id="2h1-5w-F8V"/>
+                        <outlet property="toolbarOutlet" destination="sSM-2S-hSf" id="2bQ-1Y-3KB"/>
                     </connections>
                 </viewController>
             </objects>
@@ -678,7 +710,7 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
                                     <outlet property="delegate" destination="Fdh-sf-L7u" id="UKC-Vf-ruT"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="LPz-IV-tHF">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="LPz-IV-tHF" customClass="SCCustomToolbar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -707,7 +739,7 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Filmai" image="46-movie.png" id="oTv-zu-CzC"/>
+                    <tabBarItem key="tabBarItem" title="Filmai" image="movies_empty.png" id="oTv-zu-CzC"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -719,16 +751,106 @@ Vaidina: VIncent Gallo, Claudia Gerini, Elisa Sednaoui, Fabrizio Gifuni</string>
         </scene>
     </scenes>
     <resources>
-        <image name="46-movie.png" width="20" height="25"/>
+        <image name="List_sep_640x7.png" width="640" height="7"/>
         <image name="Star-256.png" width="256" height="256"/>
         <image name="Star-empty-256.png" width="256" height="256"/>
         <image name="first.png" width="30" height="30"/>
         <image name="god80x80.jpeg" width="80" height="80"/>
-        <image name="light_list.png" width="22" height="20"/>
+        <image name="list_empty.png" width="30" height="30"/>
+        <image name="movies_empty.png" width="30" height="30"/>
         <image name="second@2x.png" width="60" height="60"/>
-        <image name="star.png" width="30" height="30"/>
+        <image name="star_empty.png" width="30" height="30"/>
+        <image name="star_not_selected_51x49.png" width="51" height="49"/>
+        <image name="star_selected_51x49.png" width="51" height="49"/>
         <image name="thelegentofkasparhauser_thumb.jpg" width="650" height="300"/>
+        <image name="time_next_33x47.png" width="33" height="47"/>
+        <image name="time_prev_33x47.png" width="33" height="47"/>
     </resources>
+    <classes>
+        <class className="SCCustomToolbar" superclassName="UIToolbar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCCustomToolbar.h"/>
+        </class>
+        <class className="SCDateNavigator" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCDateNavigator.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabelEn" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="previousButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCDirectorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCDirectorViewController.h"/>
+        </class>
+        <class className="SCLandingPageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCLandingPageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="landingButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="kaunasButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="klaipedaButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="siauliaiButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="vilniusButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCMovieCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMovieCell.h"/>
+            <relationships>
+                <relationship kind="action" name="favoriteButtonClicked:"/>
+                <relationship kind="outlet" name="directorLenghLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favoriteButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="movieEnLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="movieLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thumbImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yearsCountryLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SCMovieDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMovieDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareMovieButtonClicked:"/>
+                <relationship kind="outlet" name="bottomView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="headerImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="movieDescriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="movieMetaTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="scheduleTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="shareMovieButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SCMoviesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMoviesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SCMyProgramViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCMyProgramViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shareMyProgramCliked:"/>
+                <relationship kind="outlet" name="myProgramTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="shareProgramButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toolbarOutlet" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="SCScheduleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCScheduleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextDay:"/>
+                <relationship kind="action" name="previousDay:"/>
+                <relationship kind="action" name="toggleFavorite:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cityToolbarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="dateNavigatorView" candidateClass="SCDateNavigator"/>
+                <relationship kind="outlet" name="scheduleTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="tabBar" candidateClass="UITabBar"/>
+                <relationship kind="outlet" name="toolbarOutlet" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+        <class className="SCTabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCTabBarViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

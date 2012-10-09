@@ -8,8 +8,8 @@
 
 #import "SCTabBarViewController.h"
 
-@interface SCTabBarViewController ()
-
+@interface SCTabBarViewController (private)
+- (UITabBar *)tabBar;
 @end
 
 @implementation SCTabBarViewController
@@ -17,7 +17,12 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+   // [[self tabBar] setBackgroundColor:[UIColor greenColor]];
+    [[self tabBar] setBackgroundImage:[UIImage imageNamed:@"tabBar_bg____1x48.png"]];
+   // [[self tabBar] setTintColor:[UIColor colorWithRed:30/255 green:30/255 blue:30/255 alpha:1]];
+    
 	// Do any additional setup after loading the view.
 }
 

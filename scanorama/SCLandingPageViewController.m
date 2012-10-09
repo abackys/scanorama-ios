@@ -16,6 +16,17 @@
 
 @end
 
+
+
+@implementation UINavigationBar (UINavigationBarCategory)   
+- (void)drawRect:(CGRect)rect {
+    UIColor *color = [UIColor blueColor];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColor(context, CGColorGetComponents( [color CGColor]));
+    CGContextFillRect(context, rect);
+}   
+@end
+
 @implementation SCLandingPageViewController
 @synthesize vilniusButton = _vilniusButton;
 @synthesize kaunasButton = _kaunasButton;
@@ -28,8 +39,8 @@
 {
 
     SCJsonDatabase *jsonDb = [[SCJsonDatabase alloc] init];
-        [jsonDb insertMoviesJsonToDatabase];
-       [jsonDb insertScheduleJsonToDatabase];
+    //    [jsonDb insertMoviesJsonToDatabase];
+    //   [jsonDb insertScheduleJsonToDatabase];
 
    // [[self navigationController] setTitle:@"Landing Page"];
     [super viewDidLoad];
